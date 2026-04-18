@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useLanguage } from "../../i18n/LanguageContext";
 import Section from "../../components/Section";
 import CTABanner from "../../components/CTABanner";
@@ -23,31 +22,21 @@ export default function HealingSessions() {
 
   return (
     <>
-      <header className="min-h-screen flex items-center px-8 max-w-7xl mx-auto pt-20">
-        <div ref={heroRef} className="animate-on-scroll grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-<span className="text-tertiary font-sans text-sm uppercase tracking-[0.3em] mb-6 block">{t.healingPage.heroTag}</span>
-            <h1 className="text-5xl md:text-7xl font-serif text-primary leading-tight mb-6">
-              {t.healingPage.heroTitle1} <br /><span className="italic">{t.healingPage.heroTitle2}</span>
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+        <div className="absolute inset-0 z-0">
+          <img className="w-full h-full object-cover" alt="Healing session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA21jDO2UDm7xBS4hKiXGCvGu9ky3OvoZk9UVrkBYpTHCAMZmDrL3l-p-qImLYh2giR1fFEgHoHTvlq_G3uYFFliw7W1qR_h5-C7ZCZ1j9OKeiHsTSlEjdTloDpfaNuMSGAmrW54vS6pxG2Vv4BDs4G3ighvhcKOQ-056bw1Fv_dJAg00Vy90WTr4NPTHKpLgrkwsldjtCba-BXLOVInesFTTTzFcYLsV240vsDwpf9Lxwr1mZHFIu7Keda50jSWFh1jxMOLSehG14" />
+          <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent" />
+        </div>
+        <div ref={heroRef} className="animate-on-scroll relative z-10 max-w-7xl mx-auto px-8 w-full">
+          <div className="max-w-2xl">
+            <span className="inline-block px-4 py-1.5 bg-primary-container/20 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6">{t.healingPage.heroTag}</span>
+            <h1 className="text-6xl md:text-8xl font-serif leading-tight mb-8 tracking-tight text-on-surface">
+              {t.healingPage.heroTitle1} <br /><span className="italic text-primary">{t.healingPage.heroTitle2}</span>
             </h1>
-            <p className="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">{t.healingPage.heroText}</p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/contact" className="bg-primary text-on-primary px-10 py-4 rounded-full font-sans text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-primary/20">
-                {t.healingPage.bookSession}
-              </Link>
-              <a href="#modalities" className="bg-surface-container-high px-10 py-4 rounded-full font-sans text-sm uppercase tracking-widest hover:bg-surface-container-highest transition-colors">
-                {t.healingPage.exploreModalities}
-              </a>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="aspect-square rounded-xl overflow-hidden shadow-2xl">
-              <img className="w-full h-full object-cover" alt="Healing session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA21jDO2UDm7xBS4hKiXGCvGu9ky3OvoZk9UVrkBYpTHCAMZmDrL3l-p-qImLYh2giR1fFEgHoHTvlq_G3uYFFliw7W1qR_h5-C7ZCZ1j9OKeiHsTSlEjdTloDpfaNuMSGAmrW54vS6pxG2Vv4BDs4G3ighvhcKOQ-056bw1Fv_dJAg00Vy90WTr4NPTHKpLgrkwsldjtCba-BXLOVInesFTTTzFcYLsV240vsDwpf9Lxwr1mZHFIu7Keda50jSWFh1jxMOLSehG14" />
-            </div>
-            <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl -z-10" />
+            <p className="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">{t.healingPage.heroText}</p>
           </div>
         </div>
-      </header>
+      </section>
 
       <Section bg="low">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

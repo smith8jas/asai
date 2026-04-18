@@ -24,28 +24,23 @@ export default function NutritionCoaching() {
 
   return (
     <>
-      <header className="min-h-screen flex items-center px-8 max-w-7xl mx-auto pt-20">
-        <div ref={heroRef} className="animate-on-scroll grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-<span className="text-tertiary font-sans text-sm uppercase tracking-[0.3em] mb-6 block">{t.nutritionPage.heroTag}</span>
-            <h1 className="text-5xl md:text-7xl font-serif text-primary leading-tight mb-6">
-              {t.nutritionPage.heroTitle1} <br /><span className="italic">{t.nutritionPage.heroTitle2}</span>
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+        <div className="absolute inset-0 z-0">
+          <img className="w-full h-full object-cover" alt="Health coaching" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEffw72o0z7fwARUKFPZfctLwgsIcpKRqOcO9391j2T6KOTqRFV5Dov0oAfJOM9le-qNmx5GjhWN4oFM0s5ePjnfuqvraMLhDk2VV_Ih791iWSfgS9s-LSUsxYxwS8U9jaNFa2jWL2wmoohBZeCib6sP6X-31c2GcSzsPeY70isncV9wcR__cRQLvzC9fZjDqjpY8erS3-i9b7y6-nTSaX-0Fdz4FbZUk2g0aXwZ9H77Qioxoyo5F22wopZA49P4bK3o4M8V47rnU" />
+          <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent" />
+        </div>
+        <div ref={heroRef} className="animate-on-scroll relative z-10 max-w-7xl mx-auto px-8 w-full">
+          <div className="max-w-2xl">
+            <span className="inline-block px-4 py-1.5 bg-primary-container/20 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6">{t.nutritionPage.heroTag}</span>
+            <h1 className="text-6xl md:text-8xl font-serif leading-tight mb-8 tracking-tight text-on-surface">
+              {t.nutritionPage.heroTitle1} <br /><span className="italic text-primary">{t.nutritionPage.heroTitle2}</span>
             </h1>
-            <p className="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+            <p className="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">
               {t.nutritionPage.heroText}
             </p>
-            <Link to="/contact" className="bg-primary text-on-primary px-10 py-4 rounded-full font-sans text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-primary/20 inline-block">
-              {t.nutritionPage.bookConsultation}
-            </Link>
-          </div>
-          <div className="relative">
-            <div className="aspect-square rounded-xl overflow-hidden shadow-2xl">
-              <img className="w-full h-full object-cover" alt="Health coaching" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEffw72o0z7fwARUKFPZfctLwgsIcpKRqOcO9391j2T6KOTqRFV5Dov0oAfJOM9le-qNmx5GjhWN4oFM0s5ePjnfuqvraMLhDk2VV_Ih791iWSfgS9s-LSUsxYxwS8U9jaNFa2jWL2wmoohBZeCib6sP6X-31c2GcSzsPeY70isncV9wcR__cRQLvzC9fZjDqjpY8erS3-i9b7y6-nTSaX-0Fdz4FbZUk2g0aXwZ9H77Qioxoyo5F22wopZA49P4bK3o4M8V47rnU" />
-            </div>
-            <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl -z-10" />
           </div>
         </div>
-      </header>
+      </section>
 
       <Section bg="low">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

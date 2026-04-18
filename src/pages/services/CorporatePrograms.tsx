@@ -26,31 +26,21 @@ export default function CorporatePrograms() {
 
   return (
     <>
-      <header className="pt-32 pb-20 px-8 max-w-7xl mx-auto">
-        <div ref={heroRef} className="animate-on-scroll grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-<span className="text-tertiary font-sans text-sm uppercase tracking-[0.3em] mb-6 block">{t.corporatePage.heroTag}</span>
-            <h1 className="text-5xl md:text-7xl font-serif text-primary leading-tight mb-6">
-              {t.corporatePage.heroTitle1} <br /><span className="italic">{t.corporatePage.heroTitle2}</span>
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+        <div className="absolute inset-0 z-0">
+          <img className="w-full h-full object-cover" alt="Corporate wellness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1lCB12rKOnrThEyyz6-sE2vi1XxUHXoLZQldojb3OE6VZwrKhx1t5B2GFBBiFYYg8A7CIkJE3uadccdV4uvb-0tfIBycRPHYlwm3csCW7MGREukkErTz3vz-zKaot9NCSFFgaJ4BTl-UPB3Hb1ZJf1KRMkJS8xdr-bLj_qLqc7tDVwUTnjm-diE3JCqIyeudeDgFUIHByZFkibr-weTDhzqtehi_InsehAAwb7PrMj_dvXhRJ4R7VZc8e5M8HMH9D_4wodUPzUGg" />
+          <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent" />
+        </div>
+        <div ref={heroRef} className="animate-on-scroll relative z-10 max-w-7xl mx-auto px-8 w-full">
+          <div className="max-w-2xl">
+            <span className="inline-block px-4 py-1.5 bg-primary-container/20 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6">{t.corporatePage.heroTag}</span>
+            <h1 className="text-6xl md:text-8xl font-serif leading-tight mb-8 tracking-tight text-on-surface">
+              {t.corporatePage.heroTitle1} <br /><span className="italic text-primary">{t.corporatePage.heroTitle2}</span>
             </h1>
-            <p className="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">{t.corporatePage.heroText}</p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/contact" className="bg-primary text-on-primary px-10 py-4 rounded-full font-sans text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-primary/20">
-                {t.corporatePage.getStarted}
-              </Link>
-              <a href="#wellness" className="bg-surface-container-high px-10 py-4 rounded-full font-sans text-sm uppercase tracking-widest hover:bg-surface-container-highest transition-colors">
-                {t.corporatePage.learnMore}
-              </a>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
-              <img className="w-full h-full object-cover" alt="Corporate wellness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1lCB12rKOnrThEyyz6-sE2vi1XxUHXoLZQldojb3OE6VZwrKhx1t5B2GFBBiFYYg8A7CIkJE3uadccdV4uvb-0tfIBycRPHYlwm3csCW7MGREukkErTz3vz-zKaot9NCSFFgaJ4BTl-UPB3Hb1ZJf1KRMkJS8xdr-bLj_qLqc7tDVwUTnjm-diE3JCqIyeudeDgFUIHByZFkibr-weTDhzqtehi_InsehAAwb7PrMj_dvXhRJ4R7VZc8e5M8HMH9D_4wodUPzUGg" />
-            </div>
-            <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl -z-10" />
+            <p className="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">{t.corporatePage.heroText}</p>
           </div>
         </div>
-      </header>
+      </section>
 
       {/* Wellness */}
       <Section id="wellness" bg="low">
