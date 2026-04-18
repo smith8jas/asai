@@ -17,14 +17,14 @@ export default function YogaClasses() {
   };
 
   const styles = [
-    { title: t.yogaPage.powerTitle, text: t.yogaPage.powerText, extended: t.yogaPage.powerExtended, icon: 'bolt' },
-    { title: t.yogaPage.kundaliniTitle, text: t.yogaPage.kundaliniText, extended: t.yogaPage.kundaliniExtended, icon: 'air' },
-    { title: t.yogaPage.kidsTitle, text: t.yogaPage.kidsText, extended: t.yogaPage.kidsExtended, icon: 'child_care' },
-    { title: t.yogaPage.gentleTitle, text: t.yogaPage.gentleText, extended: t.yogaPage.gentleExtended, icon: 'spa' },
-    { title: t.yogaPage.ashtangaTitle, text: t.yogaPage.ashtangaText, extended: t.yogaPage.ashtangaExtended, icon: 'fitness_center' },
-    { title: t.yogaPage.athletesTitle, text: t.yogaPage.athletesText, extended: t.yogaPage.athletesExtended, icon: 'sports' },
-    { title: t.yogaPage.prenatalTitle, text: t.yogaPage.prenatalText, extended: t.yogaPage.prenatalExtended, icon: 'pregnant_woman' },
-    { title: t.yogaPage.restorativeTitle, text: t.yogaPage.restorativeText, extended: t.yogaPage.restorativeExtended, icon: 'self_improvement' },
+    { title: t.yogaPage.powerTitle, text: t.yogaPage.powerText, extended: t.yogaPage.powerExtended, icon: 'bolt', img: 'https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg?auto=compress&w=800' },
+    { title: t.yogaPage.kundaliniTitle, text: t.yogaPage.kundaliniText, extended: t.yogaPage.kundaliniExtended, icon: 'air', img: 'https://images.pexels.com/photos/3822864/pexels-photo-3822864.jpeg?auto=compress&w=800' },
+    { title: t.yogaPage.kidsTitle, text: t.yogaPage.kidsText, extended: t.yogaPage.kidsExtended, icon: 'child_care', img: 'https://images.pexels.com/photos/8613312/pexels-photo-8613312.jpeg?auto=compress&w=800' },
+    { title: t.yogaPage.gentleTitle, text: t.yogaPage.gentleText, extended: t.yogaPage.gentleExtended, icon: 'spa', img: 'https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&w=800' },
+    { title: t.yogaPage.ashtangaTitle, text: t.yogaPage.ashtangaText, extended: t.yogaPage.ashtangaExtended, icon: 'fitness_center', img: 'https://images.pexels.com/photos/4662438/pexels-photo-4662438.jpeg?auto=compress&w=800' },
+    { title: t.yogaPage.athletesTitle, text: t.yogaPage.athletesText, extended: t.yogaPage.athletesExtended, icon: 'sports', img: 'https://images.pexels.com/photos/4498482/pexels-photo-4498482.jpeg?auto=compress&w=800' },
+    { title: t.yogaPage.prenatalTitle, text: t.yogaPage.prenatalText, extended: t.yogaPage.prenatalExtended, icon: 'pregnant_woman', img: 'https://images.pexels.com/photos/7155541/pexels-photo-7155541.jpeg?auto=compress&w=800' },
+    { title: t.yogaPage.restorativeTitle, text: t.yogaPage.restorativeText, extended: t.yogaPage.restorativeExtended, icon: 'self_improvement', img: 'https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&w=800' },
   ];
 
   return (
@@ -91,52 +91,80 @@ export default function YogaClasses() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {styles.map((s, i) => {
-            const isExpanded = expandedIndex === i;
-            return (
-              <div
-                key={s.title}
-                onClick={() => setExpandedIndex(isExpanded ? null : i)}
-                className={`cursor-pointer [perspective:1200px] transition-all duration-500 ${
-                  isExpanded ? "md:col-span-2 lg:col-span-2" : ""
-                }`}
+          {styles.map((s, i) => (
+            <div
+              key={s.title}
+              className="bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:bg-primary group h-80 flex flex-col"
+            >
+              <span className="material-symbols-outlined text-primary text-3xl mb-4 group-hover:text-white transition-colors">
+                {s.icon}
+              </span>
+              <h3 className="font-serif text-xl text-on-surface mb-3 group-hover:text-white transition-colors">
+                {s.title}
+              </h3>
+              <p className="text-on-surface-variant text-sm leading-relaxed group-hover:text-white/80 transition-colors flex-1">
+                {s.text}
+              </p>
+              <button
+                onClick={() => setExpandedIndex(i)}
+                className="mt-4 w-full py-2.5 border border-primary text-primary text-xs font-sans uppercase tracking-widest rounded-full group-hover:border-white group-hover:text-white hover:!bg-white hover:!text-primary transition-colors"
               >
-                <div
-                  className={`relative w-full h-64 transition-transform duration-700 ease-in-out [transform-style:preserve-3d] ${
-                    isExpanded ? "[transform:rotateY(180deg)]" : ""
-                  }`}
-                >
-                  {/* Front */}
-                  <div className="absolute inset-0 [backface-visibility:hidden] bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:bg-primary group">
-                    <span className="material-symbols-outlined text-primary text-3xl mb-4 group-hover:text-white transition-colors">
-                      {s.icon}
-                    </span>
-                    <h3 className="font-serif text-xl text-on-surface mb-3 group-hover:text-white transition-colors">
-                      {s.title}
-                    </h3>
-                    <p className="text-on-surface-variant text-sm leading-relaxed group-hover:text-white/80 transition-colors">
-                      {s.text}
-                    </p>
-                  </div>
-                  {/* Back */}
-                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-primary rounded-xl p-8 overflow-y-auto shadow-xl">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="material-symbols-outlined text-white text-3xl">
-                        {s.icon}
-                      </span>
-                      <h3 className="font-serif text-xl text-white">
-                        {s.title}
-                      </h3>
-                    </div>
-                    <p className="text-white/90 text-sm leading-relaxed">
-                      {s.extended}
-                    </p>
-                  </div>
+                {t.corporatePage.learnMore}
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {expandedIndex !== null && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/50 backdrop-blur-sm"
+            onClick={() => setExpandedIndex(null)}
+          >
+            <div
+              className="bg-surface-container-lowest rounded-2xl max-w-6xl w-full h-[85vh] md:h-[42rem] overflow-hidden shadow-2xl animate-[scaleIn_0.3s_ease-out] flex flex-col md:flex-row"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="md:w-1/2 h-56 md:h-auto shrink-0">
+                <img
+                  src={styles[expandedIndex].img}
+                  alt={styles[expandedIndex].title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="md:w-1/2 p-8 md:p-12 overflow-y-auto flex flex-col">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="material-symbols-outlined text-primary text-4xl">
+                    {styles[expandedIndex].icon}
+                  </span>
+                  <h3 className="font-serif text-3xl md:text-4xl text-on-surface">
+                    {styles[expandedIndex].title}
+                  </h3>
+                </div>
+                <p className="text-on-surface-variant text-lg leading-relaxed mb-4">
+                  {styles[expandedIndex].text}
+                </p>
+                <p className="text-on-surface-variant leading-relaxed mb-8 flex-1">
+                  {styles[expandedIndex].extended}
+                </p>
+                <div className="flex items-center justify-between">
+                  <Link
+                    to="/contact"
+                    className="bg-primary text-on-primary px-8 py-3 rounded-full text-sm font-sans uppercase tracking-widest hover:scale-105 transition-transform"
+                  >
+                    {t.yogaPage.viewSchedule}
+                  </Link>
+                  <button
+                    onClick={() => setExpandedIndex(null)}
+                    className="text-on-surface-variant hover:text-on-surface text-sm uppercase tracking-widest font-sans flex items-center gap-2 transition-colors"
+                  >
+                    <span className="material-symbols-outlined text-sm">close</span>
+                    Close
+                  </button>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          </div>
+        )}
       </Section>
 
       {/* Benefits */}
