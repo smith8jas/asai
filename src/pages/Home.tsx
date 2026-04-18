@@ -196,16 +196,16 @@ export default function Home() {
                   <h3 className="font-serif text-2xl text-on-surface mb-4 group-hover:text-white transition-colors">
                     {card.title}
                   </h3>
-                  <p className="text-on-surface-variant mb-8 leading-relaxed group-hover:text-white/80 transition-colors">
+                  <p className="text-on-surface-variant mb-8 leading-relaxed group-hover:text-white transition-colors">
                     {card.text}
                   </p>
                   <ul className="space-y-3">
-                    <li className="flex items-center text-sm font-sans uppercase tracking-wider text-tertiary group-hover:text-white/70 transition-colors">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary-container group-hover:bg-white/40 mr-3 transition-colors" />{' '}
+                    <li className="flex items-center text-sm font-sans uppercase tracking-wider text-tertiary group-hover:text-white transition-colors">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary-container group-hover:bg-white mr-3 transition-colors" />{' '}
                       {card.b1}
                     </li>
-                    <li className="flex items-center text-sm font-sans uppercase tracking-wider text-tertiary group-hover:text-white/70 transition-colors">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary-container group-hover:bg-white/40 mr-3 transition-colors" />{' '}
+                    <li className="flex items-center text-sm font-sans uppercase tracking-wider text-tertiary group-hover:text-white transition-colors">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary-container group-hover:bg-white mr-3 transition-colors" />{' '}
                       {card.b2}
                     </li>
                   </ul>
