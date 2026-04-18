@@ -24,7 +24,7 @@ export default function HealingSessions() {
     <>
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <img className="w-full h-full object-cover" alt="Healing session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA21jDO2UDm7xBS4hKiXGCvGu9ky3OvoZk9UVrkBYpTHCAMZmDrL3l-p-qImLYh2giR1fFEgHoHTvlq_G3uYFFliw7W1qR_h5-C7ZCZ1j9OKeiHsTSlEjdTloDpfaNuMSGAmrW54vS6pxG2Vv4BDs4G3ighvhcKOQ-056bw1Fv_dJAg00Vy90WTr4NPTHKpLgrkwsldjtCba-BXLOVInesFTTTzFcYLsV240vsDwpf9Lxwr1mZHFIu7Keda50jSWFh1jxMOLSehG14" />
+          <img className="w-full h-full object-cover" alt="Healing session" src="https://images.pexels.com/photos/3560044/pexels-photo-3560044.jpeg?auto=compress&w=1920" />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent" />
         </div>
         <div ref={heroRef} className="animate-on-scroll relative z-10 max-w-7xl mx-auto px-8 w-full">
@@ -53,7 +53,7 @@ export default function HealingSessions() {
             </div>
           </div>
           <div className="relative">
-            <img className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover" alt="Healing practice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2InVyodQ5Z5lafD8X2gvlvBiyKeoOx_Z4KPb_7VY_k6UGVdUukAOBnL5o-ID-bIFlWEZj_McQHsqWh9vyPikt6JXDkkPFnvLed7spub-Z_8Tryl5YxtDGn4fmFemr8ri7uujM5nNSO81K7nR5g2FUU9JuKIfK5jlk8mOLOaVLV0Sa_noU0vxk27tZWtvYXbE7ua5OCN2d6zxPWpe-Jpe6ZILW-_DvorKk8sB74YyzXOcE5JNI6RYi9GCLDf75nWu7jnFJhOA3-vQ" />
+            <img className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover" alt="Healing practice" src="https://images.pexels.com/photos/3822583/pexels-photo-3822583.jpeg?auto=compress&w=800" />
           </div>
         </div>
       </Section>

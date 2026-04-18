@@ -23,7 +23,7 @@ export default function WorkshopsCourses() {
     <>
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <img className="w-full h-full object-cover" alt="Workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOhp8G-uan1f4LMCDYadnWo2EVwLM_-Ux9ZH-_NinrY-iTlScihwHBeV8W_5SUQCLwFezMVKRpbmMIg5kpSpT0juy7eHowdwmRABUKF6mgNfGoxCx5QxuUD70AejPuV903gtUiZbPUGnspcWGKDOm7BsFAJKFIRsUnshQW5wD1cClPhKsCtq-D8DL7O6n0QwcqeIyMVIl53lWQ0m4PLrNeSnqyg7zyq1Z0zNVdl7y6hZ5ghN8q_ukT_jYBnIlBax4qUNFy9b4VkQs" />
+          <img className="w-full h-full object-cover" alt="Workshop" src="https://images.pexels.com/photos/6551144/pexels-photo-6551144.jpeg?auto=compress&w=1920" />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent" />
         </div>
         <div ref={heroRef} className="animate-on-scroll relative z-10 max-w-7xl mx-auto px-8 w-full">

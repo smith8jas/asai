@@ -28,7 +28,7 @@ export default function CorporatePrograms() {
     <>
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <img className="w-full h-full object-cover" alt="Corporate wellness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1lCB12rKOnrThEyyz6-sE2vi1XxUHXoLZQldojb3OE6VZwrKhx1t5B2GFBBiFYYg8A7CIkJE3uadccdV4uvb-0tfIBycRPHYlwm3csCW7MGREukkErTz3vz-zKaot9NCSFFgaJ4BTl-UPB3Hb1ZJf1KRMkJS8xdr-bLj_qLqc7tDVwUTnjm-diE3JCqIyeudeDgFUIHByZFkibr-weTDhzqtehi_InsehAAwb7PrMj_dvXhRJ4R7VZc8e5M8HMH9D_4wodUPzUGg" />
+          <img className="w-full h-full object-cover" alt="Corporate wellness" src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&w=1920" />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent" />
         </div>
         <div ref={heroRef} className="animate-on-scroll relative z-10 max-w-7xl mx-auto px-8 w-full">
@@ -52,7 +52,7 @@ export default function CorporatePrograms() {
             <p className="text-on-surface-variant leading-relaxed text-lg">{t.corporatePage.wellnessText2}</p>
           </div>
           <div className="relative">
-            <img className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover" alt="Team wellness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGsc--ON7Mf1mKt_v_cMawAQB-yv0hbGRVZRzPCjsBqK0K5gRaYgysPgfz5THeirlwa7ChIk5tGWBrP0rjRySnSaAxTMnnuvVt48PTdXbmvXYfO4BtIGws9Nl0cxtamiFkloWBbRZyYXhIpXIJvKkVRVynAbhZ0-N2_uk6qPE-7xOCFme5VabRRl2VZsEPpWkfKDXPdVp4LvuC1JIgxFEaYH5dfW9Q_ujXAyOXVLXklNmu2LwE2pm9EWM7VAXFVMduibWYinLeEDs" />
+            <img className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover" alt="Team wellness" src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&w=800" />
           </div>
         </div>
       </Section>

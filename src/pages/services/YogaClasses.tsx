@@ -66,20 +66,6 @@ export default function YogaClasses() {
             <p className="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">
               {t.yogaPage.heroText}
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/20"
-              >
-                {t.yogaPage.viewSchedule}
-              </Link>
-              <a
-                href="#styles"
-                className="bg-surface-container-highest/50 backdrop-blur-md px-10 py-4 rounded-full font-bold text-lg hover:bg-surface-container-highest transition-colors"
-              >
-                {t.yogaPage.ourEthos}
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -117,7 +103,7 @@ export default function YogaClasses() {
               </p>
               <button
                 onClick={() => setExpandedIndex(i)}
-                className="mt-4 w-full py-2.5 border border-primary text-primary text-xs font-sans uppercase tracking-widest rounded-full group-hover:border-white group-hover:text-white hover:!bg-white hover:!text-primary transition-colors"
+                className="mt-4 w-full py-2.5 border border-primary text-primary text-xs font-sans uppercase tracking-widest rounded-full group-hover:border-white group-hover:text-white hover:!bg-tertiary hover:!text-white hover:!border-tertiary transition-colors"
               >
                 {t.corporatePage.learnMore}
               </button>
@@ -259,7 +245,7 @@ export default function YogaClasses() {
           <img
             className="w-full h-full object-cover"
             alt="Tranquil studio corner"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsPht4zDb-Kbue4sCmPqveGUPVeIzFy5_aQDT3plCv9jdO04xOan2vrp-sydRDVfcEtydyqqTcpVjXiw9mFZzi47J6UaLcqW7N2NBKoK7gmhCt-BXuyfddakJEQ3oypfXiI9FdUEvyuU6YlMiRhty1xer73HYw_Qn9_My_bOp7aEKQbZi8uMKU04Bj7Lvk9WZhfC28nFL0dUbLr19LT-L_wKGU9hpD2IEPYLwTrbVzENBYbHQg9OM0Ro_WpBzH_HGmKRmaK44Xx5g"
+            src="https://images.pexels.com/photos/3822668/pexels-photo-3822668.jpeg?auto=compress&w=1920"
           />
           <div className="absolute inset-0 bg-primary/90 mix-blend-multiply" />
         </div>
@@ -271,20 +257,12 @@ export default function YogaClasses() {
           <p className="text-xl mb-12 text-on-primary/80 max-w-2xl mx-auto">
             {t.yogaPage.ctaText}
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
-              to="/contact"
-              className="bg-surface text-primary px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-all shadow-2xl"
-            >
-              {t.yogaPage.ctaButton1}
-            </Link>
-            <Link
-              to="/services"
-              className="border-2 border-white/30 hover:border-white/60 px-12 py-5 rounded-full font-bold text-xl transition-all text-on-primary"
-            >
-              {t.yogaPage.ctaButton2}
-            </Link>
-          </div>
+          <Link
+            to="/contact"
+            className="bg-surface text-primary px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-all shadow-2xl inline-block"
+          >
+            {t.yogaPage.ctaButton1}
+          </Link>
         </div>
       </section>
     </>

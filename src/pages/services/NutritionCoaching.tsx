@@ -26,7 +26,7 @@ export default function NutritionCoaching() {
     <>
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <img className="w-full h-full object-cover" alt="Health coaching" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEffw72o0z7fwARUKFPZfctLwgsIcpKRqOcO9391j2T6KOTqRFV5Dov0oAfJOM9le-qNmx5GjhWN4oFM0s5ePjnfuqvraMLhDk2VV_Ih791iWSfgS9s-LSUsxYxwS8U9jaNFa2jWL2wmoohBZeCib6sP6X-31c2GcSzsPeY70isncV9wcR__cRQLvzC9fZjDqjpY8erS3-i9b7y6-nTSaX-0Fdz4FbZUk2g0aXwZ9H77Qioxoyo5F22wopZA49P4bK3o4M8V47rnU" />
+          <img className="w-full h-full object-cover" alt="Health coaching" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&w=1920" />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent" />
         </div>
         <div ref={heroRef} className="animate-on-scroll relative z-10 max-w-7xl mx-auto px-8 w-full">
@@ -45,7 +45,7 @@ export default function NutritionCoaching() {
       <Section bg="low">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative">
-            <img className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover" alt="Healthy food" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBhs3oAJCplUKiSJDNXirZTqppAPssRqjV3mHbcfdgMRNEQ4ZvnFsZStODnloI8Zt1pkEHVkGg5jCKJvEeTja8tgv6g9JVlgNbsB4coKbvB3qKopPudNzdmctFTZTa3jpvTycCGtczv3OT4NKOTu0Hbu1aTwh7d64O57LAAD2wG3p1Ew7SpJcvFP-l3BdJ4QygcgnwBhPwqfOwJA_1bTR5218rzD6KHwqUOGBjcOU2AMgk3ih0muv9UfqIdHNlxd1dUKcoDjsp4Bs" />
+            <img className="rounded-xl shadow-lg w-full aspect-[4/5] object-cover" alt="Healthy food" src="https://images.pexels.com/photos/1105166/pexels-photo-1105166.jpeg?auto=compress&w=800" />
           </div>
           <div className="order-1 lg:order-2">
             <h2 className="font-serif text-4xl md:text-5xl text-primary mb-6 leading-tight">{t.nutritionPage.philTitle}</h2>
