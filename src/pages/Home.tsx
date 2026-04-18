@@ -185,12 +185,11 @@ export default function Home() {
                 b2: t.home.corporateBullet2,
               },
             ].map((card) => (
-              <Link
+              <div
                 key={card.to}
-                to={card.to}
-                className="group snap-start shrink-0 w-[85vw] sm:w-[45vw] lg:w-[calc(33.333%-1.34rem)] bg-surface-container-lowest p-8 rounded-xl overflow-hidden transition-colors duration-300 hover:bg-tertiary"
+                className="group snap-start shrink-0 w-[85vw] sm:w-[45vw] lg:w-[calc(33.333%-1.34rem)] bg-surface-container-lowest p-8 rounded-xl overflow-hidden transition-colors duration-300 hover:bg-tertiary flex flex-col"
               >
-                <div className="relative z-10">
+                <div className="relative z-10 flex-1">
                   <span className="material-symbols-outlined text-primary text-3xl mb-6 group-hover:text-white transition-colors">
                     {card.icon}
                   </span>
@@ -211,7 +210,13 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-              </Link>
+                <Link
+                  to={card.to}
+                  className="mt-6 w-full py-2.5 border border-primary text-primary text-xs font-sans uppercase tracking-widest rounded-full group-hover:border-white group-hover:text-white hover:!bg-white hover:!text-primary transition-colors text-center block"
+                >
+                  {t.corporatePage.learnMore}
+                </Link>
+              </div>
             ))}
           </div>
           {/* Scroll arrows */}
