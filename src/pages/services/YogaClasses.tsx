@@ -188,9 +188,9 @@ export default function YogaClasses() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: 'psychology', text: t.yogaPage.benefit1 },
-            { icon: 'flexibility', text: t.yogaPage.benefit2 },
-            { icon: 'lightbulb', text: t.yogaPage.benefit3 },
+            { icon: 'self_improvement', text: t.yogaPage.benefit1 },
+            { icon: 'fitness_center', text: t.yogaPage.benefit2 },
+            { icon: 'favorite', text: t.yogaPage.benefit3 },
             { icon: 'shield', text: t.yogaPage.benefit4 },
           ].map((b) => (
             <div
