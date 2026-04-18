@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #56642b;
-  --color-primary-container: #8a9a5b;
-  --color-primary-fixed: #d9eaa3;
-  --color-primary-fixed-dim: #bdce89;
+  --color-primary: #3d7524;
+  --color-primary-container: #6aad4a;
+  --color-primary-fixed: #c8e6b4;
+  --color-primary-fixed-dim: #a3d48a;
   --color-on-primary: #ffffff;
-  --color-on-primary-container: #253000;
+  --color-on-primary-container: #1a3d0a;
 
   --color-surface: #faf9f6;
   --color-surface-container-lowest: #ffffff;
@@ -17,16 +17,16 @@
   --color-surface-dim: #dbdad7;
 
   --color-on-surface: #1a1c1a;
-  --color-on-surface-variant: #46483c;
+  --color-on-surface-variant: #44463c;
   --color-outline: #76786b;
   --color-outline-variant: #c6c8b8;
 
-  --color-tertiary: #725a39;
-  --color-tertiary-container: #aa8f69;
+  --color-tertiary: #6b2d6b;
+  --color-tertiary-container: #9b5a9b;
   --color-on-tertiary: #ffffff;
 
-  --color-secondary: #65601e;
-  --color-secondary-container: #e9e392;
+  --color-secondary: #5a2458;
+  --color-secondary-container: #e8c8e7;
 
   --color-inverse-surface: #2f312f;
   --color-inverse-on-surface: #f2f1ee;
@@ -81,4 +81,15 @@ body {
 }
 .animate-breathe {
   animation: breathe 4s ease-in-out infinite;
+}
+
+/* Hide scrollbar */
+.scroll-smooth::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card expand animation */
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

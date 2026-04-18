@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../i18n/LanguageContext";
 import Section from "../components/Section";
@@ -7,6 +8,13 @@ import useScrollAnimation from "../components/useScrollAnimation";
 export default function Home() {
   const { t } = useLanguage();
   const heroRef = useScrollAnimation<HTMLDivElement>();
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const scrollSlider = (direction: "left" | "right") => {
+    if (!sliderRef.current) return;
+    const scrollAmount = sliderRef.current.offsetWidth * 0.6;
+    sliderRef.current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -80,7 +88,7 @@ export default function Home() {
           <p className="max-w-md text-on-surface-variant">{t.home.servicesText}</p>
         </div>
         <div className="relative">
-          <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+          <div ref={sliderRef} className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory scroll-smooth" style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}>
             {[
               { to: "/services/yoga-asai", icon: "self_improvement", title: t.home.yogaTitle, text: t.home.yogaText, b1: t.home.privateSessions, b2: t.home.groupImmersion },
               { to: "/services/nutrition-coaching", icon: "ecg_heart", title: t.home.nutritionTitle, text: t.home.nutritionText, b1: t.home.bodyAnalysis, b2: t.home.herbalAlchemy },
@@ -88,19 +96,26 @@ export default function Home() {
               { to: "/services/workshops-courses", icon: "school", title: t.home.workshopsTitle, text: t.home.workshopsText, b1: t.home.workshopsBullet1, b2: t.home.workshopsBullet2 },
               { to: "/services/corporate-programs", icon: "corporate_fare", title: t.home.corporateTitle, text: t.home.corporateText, b1: t.home.corporateBullet1, b2: t.home.corporateBullet2 },
             ].map((card) => (
-              <Link key={card.to} to={card.to} className="group snap-start shrink-0 w-[85vw] sm:w-[45vw] lg:w-[calc(33.333%-1.34rem)] bg-surface-container-lowest p-8 rounded-xl overflow-hidden transition-transform hover:-translate-y-2">
+              <Link key={card.to} to={card.to} className="group snap-start shrink-0 w-[85vw] sm:w-[45vw] lg:w-[calc(33.333%-1.34rem)] bg-surface-container-lowest p-8 rounded-xl overflow-hidden transition-colors duration-300 hover:bg-tertiary">
                 <div className="relative z-10">
-                  <span className="material-symbols-outlined text-primary text-3xl mb-6">{card.icon}</span>
-                  <h3 className="font-serif text-2xl text-on-surface mb-4">{card.title}</h3>
-                  <p className="text-on-surface-variant mb-8 leading-relaxed">{card.text}</p>
+                  <span className="material-symbols-outlined text-primary text-3xl mb-6 group-hover:text-white transition-colors">{card.icon}</span>
+                  <h3 className="font-serif text-2xl text-on-surface mb-4 group-hover:text-white transition-colors">{card.title}</h3>
+                  <p className="text-on-surface-variant mb-8 leading-relaxed group-hover:text-white/80 transition-colors">{card.text}</p>
                   <ul className="space-y-3">
-                    <li className="flex items-center text-sm font-sans uppercase tracking-wider text-tertiary"><span className="w-1.5 h-1.5 rounded-full bg-primary-container mr-3" /> {card.b1}</li>
-                    <li className="flex items-center text-sm font-sans uppercase tracking-wider text-tertiary"><span className="w-1.5 h-1.5 rounded-full bg-primary-container mr-3" /> {card.b2}</li>
+                    <li className="flex items-center text-sm font-sans uppercase tracking-wider text-tertiary group-hover:text-white/70 transition-colors"><span className="w-1.5 h-1.5 rounded-full bg-primary-container group-hover:bg-white/40 mr-3 transition-colors" /> {card.b1}</li>
+                    <li className="flex items-center text-sm font-sans uppercase tracking-wider text-tertiary group-hover:text-white/70 transition-colors"><span className="w-1.5 h-1.5 rounded-full bg-primary-container group-hover:bg-white/40 mr-3 transition-colors" /> {card.b2}</li>
                   </ul>
                 </div>
               </Link>
             ))}
           </div>
+          {/* Scroll arrows */}
+          <button onClick={() => scrollSlider("left")} className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-12 h-12 rounded-full bg-surface-container-lowest shadow-lg items-center justify-center hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors z-10">
+            <span className="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button onClick={() => scrollSlider("right")} className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 w-12 h-12 rounded-full bg-surface-container-lowest shadow-lg items-center justify-center hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors z-10">
+            <span className="material-symbols-outlined">chevron_right</span>
+          </button>
           <div className="flex justify-center gap-2 mt-4 lg:hidden">
             {[0, 1, 2, 3, 4].map((i) => (
               <span key={i} className="w-2 h-2 rounded-full bg-primary-container/40" />

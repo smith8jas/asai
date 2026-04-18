@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useLanguage } from "../i18n/LanguageContext";
 import type { Language } from "../i18n/translations";
+import AcaiBerry from "./AcaiBerry";
 
 const languages: { code: Language; label: string; flag: string }[] = [
   { code: "en", label: "English", flag: "🇺🇸" },
@@ -58,7 +59,8 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-serif italic text-primary tracking-tight">
+        <Link to="/" className="flex items-center gap-2 text-2xl font-serif italic text-primary tracking-tight">
+          <AcaiBerry className="w-8 h-8" />
           Asai
         </Link>
 

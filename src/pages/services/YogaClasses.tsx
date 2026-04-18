@@ -1,3 +1,4 @@
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../i18n/LanguageContext';
 import Section from '../../components/Section';
@@ -6,40 +7,24 @@ import useScrollAnimation from '../../components/useScrollAnimation';
 export default function YogaClasses() {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const { t } = useLanguage();
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const scheduleRef = useRef<HTMLDivElement>(null);
+
+  const scrollSchedule = (direction: "left" | "right") => {
+    if (!scheduleRef.current) return;
+    const scrollAmount = scheduleRef.current.offsetWidth * 0.6;
+    scheduleRef.current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
+  };
 
   const styles = [
-    { title: t.yogaPage.powerTitle, text: t.yogaPage.powerText, icon: 'bolt' },
-    {
-      title: t.yogaPage.kundaliniTitle,
-      text: t.yogaPage.kundaliniText,
-      icon: 'air',
-    },
-    {
-      title: t.yogaPage.kidsTitle,
-      text: t.yogaPage.kidsText,
-      icon: 'child_care',
-    },
-    { title: t.yogaPage.gentleTitle, text: t.yogaPage.gentleText, icon: 'spa' },
-    {
-      title: t.yogaPage.ashtangaTitle,
-      text: t.yogaPage.ashtangaText,
-      icon: 'fitness_center',
-    },
-    {
-      title: t.yogaPage.athletesTitle,
-      text: t.yogaPage.athletesText,
-      icon: 'sports',
-    },
-    {
-      title: t.yogaPage.prenatalTitle,
-      text: t.yogaPage.prenatalText,
-      icon: 'pregnant_woman',
-    },
-    {
-      title: t.yogaPage.restorativeTitle,
-      text: t.yogaPage.restorativeText,
-      icon: 'self_improvement',
-    },
+    { title: t.yogaPage.powerTitle, text: t.yogaPage.powerText, extended: t.yogaPage.powerExtended, icon: 'bolt' },
+    { title: t.yogaPage.kundaliniTitle, text: t.yogaPage.kundaliniText, extended: t.yogaPage.kundaliniExtended, icon: 'air' },
+    { title: t.yogaPage.kidsTitle, text: t.yogaPage.kidsText, extended: t.yogaPage.kidsExtended, icon: 'child_care' },
+    { title: t.yogaPage.gentleTitle, text: t.yogaPage.gentleText, extended: t.yogaPage.gentleExtended, icon: 'spa' },
+    { title: t.yogaPage.ashtangaTitle, text: t.yogaPage.ashtangaText, extended: t.yogaPage.ashtangaExtended, icon: 'fitness_center' },
+    { title: t.yogaPage.athletesTitle, text: t.yogaPage.athletesText, extended: t.yogaPage.athletesExtended, icon: 'sports' },
+    { title: t.yogaPage.prenatalTitle, text: t.yogaPage.prenatalText, extended: t.yogaPage.prenatalExtended, icon: 'pregnant_woman' },
+    { title: t.yogaPage.restorativeTitle, text: t.yogaPage.restorativeText, extended: t.yogaPage.restorativeExtended, icon: 'self_improvement' },
   ];
 
   return (
@@ -106,22 +91,51 @@ export default function YogaClasses() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {styles.map((s) => (
-            <div
-              key={s.title}
-              className="group bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:-translate-y-1"
-            >
-              <span className="material-symbols-outlined text-primary text-3xl mb-4">
-                {s.icon}
-              </span>
-              <h3 className="font-serif text-xl text-on-surface mb-3 group-hover:text-primary transition-colors">
-                {s.title}
-              </h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed">
-                {s.text}
-              </p>
-            </div>
-          ))}
+          {styles.map((s, i) => {
+            const isExpanded = expandedIndex === i;
+            return (
+              <div
+                key={s.title}
+                onClick={() => setExpandedIndex(isExpanded ? null : i)}
+                className={`cursor-pointer [perspective:1200px] transition-all duration-500 ${
+                  isExpanded ? "md:col-span-2 lg:col-span-2" : ""
+                }`}
+              >
+                <div
+                  className={`relative w-full h-64 transition-transform duration-700 ease-in-out [transform-style:preserve-3d] ${
+                    isExpanded ? "[transform:rotateY(180deg)]" : ""
+                  }`}
+                >
+                  {/* Front */}
+                  <div className="absolute inset-0 [backface-visibility:hidden] bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:bg-primary group">
+                    <span className="material-symbols-outlined text-primary text-3xl mb-4 group-hover:text-white transition-colors">
+                      {s.icon}
+                    </span>
+                    <h3 className="font-serif text-xl text-on-surface mb-3 group-hover:text-white transition-colors">
+                      {s.title}
+                    </h3>
+                    <p className="text-on-surface-variant text-sm leading-relaxed group-hover:text-white/80 transition-colors">
+                      {s.text}
+                    </p>
+                  </div>
+                  {/* Back */}
+                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-primary rounded-xl p-8 overflow-y-auto shadow-xl">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="material-symbols-outlined text-white text-3xl">
+                        {s.icon}
+                      </span>
+                      <h3 className="font-serif text-xl text-white">
+                        {s.title}
+                      </h3>
+                    </div>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      {s.extended}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </Section>
 
@@ -164,69 +178,38 @@ export default function YogaClasses() {
             {t.yogaPage.scheduleText}
           </p>
         </div>
-        <div className="max-w-4xl mx-auto overflow-hidden rounded-xl">
-          <table className="w-full text-left">
-            <thead className="bg-primary text-on-primary">
-              <tr>
-                <th className="px-6 py-4 font-semibold text-sm uppercase tracking-wider">
-                  {t.common.day}
-                </th>
-                <th className="px-6 py-4 font-semibold text-sm uppercase tracking-wider">
-                  {t.common.time}
-                </th>
-                <th className="px-6 py-4 font-semibold text-sm uppercase tracking-wider">
-                  {t.common.class}
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-outline-variant/20 bg-surface-container-lowest">
-              {[
-                { day: 'Monday', time: '7:00 AM', type: 'Power Yoga' },
-                { day: 'Monday', time: '6:00 PM', type: 'Kundalini Yoga' },
-                {
-                  day: 'Tuesday',
-                  time: '9:00 AM',
-                  type: t.yogaPage.gentleTitle,
-                },
-                { day: 'Tuesday', time: '5:30 PM', type: 'Ashtanga Yoga' },
-                {
-                  day: 'Wednesday',
-                  time: '7:00 AM',
-                  type: t.yogaPage.athletesTitle,
-                },
-                {
-                  day: 'Wednesday',
-                  time: '10:00 AM',
-                  type: t.yogaPage.prenatalTitle,
-                },
-                {
-                  day: 'Thursday',
-                  time: '9:00 AM',
-                  type: t.yogaPage.kidsTitle,
-                },
-                {
-                  day: 'Thursday',
-                  time: '6:00 PM',
-                  type: t.yogaPage.restorativeTitle,
-                },
-              ].map((s, i) => (
-                <tr
-                  key={i}
-                  className="hover:bg-primary-container/5 transition-colors"
-                >
-                  <td className="px-6 py-4 text-on-surface font-medium">
-                    {s.day}
-                  </td>
-                  <td className="px-6 py-4 text-on-surface-variant">
-                    {s.time}
-                  </td>
-                  <td className="px-6 py-4 text-on-surface-variant">
-                    {s.type}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="relative">
+          <div ref={scheduleRef} className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory scroll-smooth" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+            {[
+              { day: "Monday", classes: [{ time: "7:00 AM", type: "Power Yoga" }, { time: "12:00 PM", type: t.yogaPage.gentleTitle }, { time: "6:00 PM", type: "Kundalini Yoga" }] },
+              { day: "Tuesday", classes: [{ time: "9:00 AM", type: t.yogaPage.gentleTitle }, { time: "5:30 PM", type: "Ashtanga Yoga" }] },
+              { day: "Wednesday", classes: [{ time: "7:00 AM", type: t.yogaPage.athletesTitle }, { time: "10:00 AM", type: t.yogaPage.prenatalTitle }, { time: "6:00 PM", type: "Power Yoga" }] },
+              { day: "Thursday", classes: [{ time: "9:00 AM", type: t.yogaPage.kidsTitle }, { time: "6:00 PM", type: t.yogaPage.restorativeTitle }] },
+              { day: "Friday", classes: [{ time: "7:00 AM", type: "Kundalini Yoga" }, { time: "10:00 AM", type: t.yogaPage.gentleTitle }, { time: "5:30 PM", type: "Ashtanga Yoga" }] },
+              { day: "Saturday", classes: [{ time: "8:00 AM", type: "Power Yoga" }, { time: "10:00 AM", type: t.yogaPage.prenatalTitle }, { time: "12:00 PM", type: t.yogaPage.kidsTitle }] },
+              { day: "Sunday", classes: [{ time: "9:00 AM", type: t.yogaPage.gentleTitle }, { time: "11:00 AM", type: t.yogaPage.restorativeTitle }] },
+            ].map((d) => (
+              <div key={d.day} className="snap-start shrink-0 w-[75vw] sm:w-[45vw] lg:w-[calc(25%-1.15rem)] bg-surface-container-lowest rounded-xl overflow-hidden">
+                <div className="bg-primary px-6 py-4">
+                  <h3 className="font-sans text-sm uppercase tracking-widest text-on-primary font-bold">{d.day}</h3>
+                </div>
+                <div className="p-6 space-y-4">
+                  {d.classes.map((c, i) => (
+                    <div key={i} className="flex flex-col">
+                      <span className="text-xs font-sans uppercase tracking-widest text-tertiary mb-1">{c.time}</span>
+                      <span className="text-on-surface font-medium text-sm">{c.type}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <button onClick={() => scrollSchedule("left")} className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-10 h-10 rounded-full bg-surface-container-lowest shadow-lg items-center justify-center hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors z-10">
+            <span className="material-symbols-outlined text-xl">chevron_left</span>
+          </button>
+          <button onClick={() => scrollSchedule("right")} className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 w-10 h-10 rounded-full bg-surface-container-lowest shadow-lg items-center justify-center hover:bg-primary hover:text-on-primary text-on-surface-variant transition-colors z-10">
+            <span className="material-symbols-outlined text-xl">chevron_right</span>
+          </button>
         </div>
       </Section>
 
