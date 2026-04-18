@@ -89,8 +89,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-on-surface mb-1">{t.contact.contactLabel}</h3>
-                  <p className="text-on-surface-variant text-sm">hello@thebreath.com</p>
-                  <p className="text-on-surface-variant text-sm">(303) 555-0192</p>
+                  <p className="text-on-surface-variant text-sm">info@asai.bo</p>
+                  <p className="text-on-surface-variant text-sm">+591 62440066</p>
                 </div>
               </div>
             </div>
@@ -100,6 +100,25 @@ export default function Contact() {
               <p className="text-sm text-on-surface-variant leading-relaxed">{t.contact.firstVisitText}</p>
             </div>
           </div>
+        </div>
+      </Section>
+
+      <Section bg="low">
+        <div className="text-center mb-10">
+          <h2 className="font-serif text-3xl md:text-4xl text-on-surface mb-4">{t.contact.addressLabel}</h2>
+          <p className="text-on-surface-variant">{t.contact.address.replace("\n", ", ")}</p>
+        </div>
+        <div className="rounded-2xl overflow-hidden shadow-lg h-[400px] md:h-[500px]">
+          <iframe
+            title="Asai Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.5!2d-68.0925!3d-16.5225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf0a04f5a40f%3A0x57dbfc76b843e80f!2sSan%20Miguel%2C%20La%20Paz%2C%20Bolivia!5e0!3m2!1sen!2sbo!4v1700000000000"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </Section>
     </>
