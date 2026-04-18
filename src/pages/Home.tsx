@@ -119,7 +119,16 @@ export default function Home() {
       </Section>
 
       {/* Services */}
-      <Section bg="low">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&w=1920"
+            alt="Yoga background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-surface/85" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <div>
             <span className="font-sans text-sm uppercase tracking-widest text-tertiary mb-4 block">
@@ -241,7 +250,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </Section>
+        </div>
+      </section>
 
       {/* Testimonial */}
       <section className="py-32 px-8 overflow-hidden">
