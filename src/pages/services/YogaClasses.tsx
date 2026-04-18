@@ -1,4 +1,5 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../i18n/LanguageContext';
 import Section from '../../components/Section';
@@ -9,6 +10,15 @@ export default function YogaClasses() {
   const { t } = useLanguage();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const scheduleRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (expandedIndex !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [expandedIndex]);
 
   const scrollSchedule = (direction: "left" | "right") => {
     if (!scheduleRef.current) return;
@@ -115,57 +125,59 @@ export default function YogaClasses() {
           ))}
         </div>
 
-        {expandedIndex !== null && (
+      </Section>
+
+      {expandedIndex !== null && createPortal(
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-black/50 backdrop-blur-sm"
+          onClick={() => setExpandedIndex(null)}
+        >
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/50 backdrop-blur-sm"
-            onClick={() => setExpandedIndex(null)}
+            className="bg-surface-container-lowest rounded-2xl max-w-6xl w-full max-h-[90vh] md:h-[42rem] overflow-y-auto md:overflow-hidden shadow-2xl animate-[scaleIn_0.3s_ease-out] flex flex-col md:flex-row"
+            onClick={(e) => e.stopPropagation()}
           >
-            <div
-              className="bg-surface-container-lowest rounded-2xl max-w-6xl w-full h-[85vh] md:h-[42rem] overflow-hidden shadow-2xl animate-[scaleIn_0.3s_ease-out] flex flex-col md:flex-row"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="md:w-1/2 h-56 md:h-auto shrink-0">
-                <img
-                  src={styles[expandedIndex].img}
-                  alt={styles[expandedIndex].title}
-                  className="w-full h-full object-cover"
-                />
+            <div className="md:w-1/2 h-48 shrink-0 md:h-auto">
+              <img
+                src={styles[expandedIndex].img}
+                alt={styles[expandedIndex].title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="md:w-1/2 p-6 md:p-12 overflow-y-auto flex flex-col">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="material-symbols-outlined text-primary text-4xl">
+                  {styles[expandedIndex].icon}
+                </span>
+                <h3 className="font-serif text-2xl md:text-4xl text-on-surface">
+                  {styles[expandedIndex].title}
+                </h3>
               </div>
-              <div className="md:w-1/2 p-8 md:p-12 overflow-y-auto flex flex-col">
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="material-symbols-outlined text-primary text-4xl">
-                    {styles[expandedIndex].icon}
-                  </span>
-                  <h3 className="font-serif text-3xl md:text-4xl text-on-surface">
-                    {styles[expandedIndex].title}
-                  </h3>
-                </div>
-                <p className="text-on-surface-variant text-lg leading-relaxed mb-4">
-                  {styles[expandedIndex].text}
-                </p>
-                <p className="text-on-surface-variant leading-relaxed mb-8 flex-1">
-                  {styles[expandedIndex].extended}
-                </p>
-                <div className="flex items-center justify-between">
-                  <Link
-                    to="/contact"
-                    className="bg-primary text-on-primary px-8 py-3 rounded-full text-sm font-sans uppercase tracking-widest hover:scale-105 transition-transform"
-                  >
-                    {t.yogaPage.viewSchedule}
-                  </Link>
-                  <button
-                    onClick={() => setExpandedIndex(null)}
-                    className="text-on-surface-variant hover:text-on-surface text-sm uppercase tracking-widest font-sans flex items-center gap-2 transition-colors"
-                  >
-                    <span className="material-symbols-outlined text-sm">close</span>
-                    Close
-                  </button>
-                </div>
+              <p className="text-on-surface-variant md:text-lg leading-relaxed mb-4">
+                {styles[expandedIndex].text}
+              </p>
+              <p className="text-on-surface-variant leading-relaxed mb-8 flex-1">
+                {styles[expandedIndex].extended}
+              </p>
+              <div className="flex items-center justify-between">
+                <Link
+                  to="/contact"
+                  className="bg-primary text-on-primary px-6 md:px-8 py-3 rounded-full text-xs md:text-sm font-sans uppercase tracking-widest hover:scale-105 transition-transform"
+                >
+                  {t.yogaPage.viewSchedule}
+                </Link>
+                <button
+                  onClick={() => setExpandedIndex(null)}
+                  className="text-on-surface-variant hover:text-on-surface text-sm uppercase tracking-widest font-sans flex items-center gap-2 transition-colors"
+                >
+                  <span className="material-symbols-outlined text-sm">close</span>
+                  Close
+                </button>
               </div>
             </div>
           </div>
-        )}
-      </Section>
+        </div>,
+        document.body
+      )}
 
       {/* Benefits */}
       <Section bg="primary">
