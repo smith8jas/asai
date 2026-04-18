@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#56642b",
+                    "primary-fixed": "#d9eaa3",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#d0c97b",
+                    "on-secondary-container": "#696522",
+                    "on-secondary-fixed": "#1e1c00",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e3e2e0",
+                    "on-primary-fixed-variant": "#3e4c16",
+                    "on-tertiary-fixed-variant": "#584324",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#efeeeb",
+                    "primary-container": "#8a9a5b",
+                    "surface": "#faf9f6",
+                    "inverse-primary": "#bdce89",
+                    "surface-container-low": "#f4f3f1",
+                    "background": "#faf9f6",
+                    "secondary-container": "#e9e392",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#725a39",
+                    "surface-bright": "#faf9f6",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1a1c1a",
+                    "tertiary-fixed-dim": "#e1c299",
+                    "on-secondary-fixed-variant": "#4c4805",
+                    "on-primary-container": "#253000",
+                    "on-tertiary-container": "#3b290c",
+                    "secondary": "#65601e",
+                    "on-tertiary-fixed": "#281801",
+                    "surface-variant": "#e3e2e0",
+                    "on-primary-fixed": "#161f00",
+                    "on-surface": "#1a1c1a",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2f312f",
+                    "tertiary-container": "#aa8f69",
+                    "outline": "#76786b",
+                    "tertiary-fixed": "#feddb3",
+                    "secondary-fixed": "#ece594",
+                    "surface-container-high": "#e9e8e5",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dbdad7",
+                    "primary-fixed-dim": "#bdce89",
+                    "surface-tint": "#56642b",
+                    "on-surface-variant": "#46483c",
+                    "outline-variant": "#c6c8b8",
+                    "inverse-on-surface": "#f2f1ee"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #faf9f6;
+            color: #1a1c1a;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Noto Serif', serif;
+        }
+        .scale-102:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-serif italic text-primary dark:text-primary-container tracking-tight">
+                The Breath
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight" href="#">Classes</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight" href="#">Workshops</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight" href="#">Retreats</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight" href="#">About</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label text-sm uppercase tracking-widest hover:opacity-80 transition-all duration-300 scale-102">
+                Book Now
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero Section: Editorial Header -->
+<header class="mb-24 text-center max-w-3xl mx-auto">
+<h1 class="text-5xl md:text-7xl font-headline text-primary mb-6 leading-tight tracking-tight">
+                A Sanctuary for <span class="italic">Becoming</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant font-body leading-relaxed opacity-90">
+                Explore our curated wellness offerings designed to restore balance to your body, clarity to your mind, and rhythm to your breath.
+            </p>
+</header>
+<!-- Services Grid: Asymmetric Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+<!-- Yoga Classes - Large Featured Card -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center overflow-hidden relative group">
+<div class="flex-1 z-10">
+<div class="inline-flex items-center justify-center w-12 h-12 bg-primary-container/20 rounded-full mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+</div>
+<h2 class="text-3xl font-headline text-on-surface mb-4">Yoga Classes</h2>
+<p class="text-on-surface-variant mb-8 max-w-md leading-relaxed">
+                        From dynamic Vinyasa flows to restorative Hatha, our sessions are crafted to align physical posture with internal stillness.
+                    </p>
+<a class="inline-flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300" href="#">
+                        Explore Classes
+                        <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="flex-1 h-64 md:h-full w-full relative">
+<img alt="Yoga session" class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg -rotate-2 group-hover:rotate-0 transition-transform duration-500" data-alt="A peaceful yoga practitioner in a sun-drenched minimalist studio with large windows and warm wood floors during morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGzXIfvhB9mMa51SkJaDi2_NfTpXk9SLHMau3y_mtDPeXbd60XUNP7XAL__9IdfXQj_bDkrQsdmUCkt-I4H0xDCW3RfK3MnvkzohFqVpfxynXvrnYyE611prLvNHqrFGuciHyn8nOAMVeT88KvG1cM1i2Ocp6EhECStnNuhcXYBhpCJ2GTERKNi9OOseUNxDncjFcU1YokXxED-VzZiYfuSBx3n--VWUP1sIsQhnvNp_d1T4AiGceFx9jqnJnucS4fFMKWHZ-AE_4"/>
+</div>
+</div>
+<!-- Meditation - Vertical Card -->
+<div class="md:col-span-4 bg-surface-container-high rounded-xl p-8 flex flex-col justify-between group">
+<div>
+<div class="inline-flex items-center justify-center w-12 h-12 bg-primary-container/20 rounded-full mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="air">air</span>
+</div>
+<h2 class="text-3xl font-headline text-on-surface mb-4">Meditation</h2>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                        Guided breathwork and mindfulness practices to quiet the noise and reconnect with your inner landscape.
+                    </p>
+</div>
+<div class="mt-auto">
+<img alt="Meditation space" class="w-full h-40 object-cover rounded-xl mb-6 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close up of a meditation cushion and singing bowl on a natural woven mat with soft dappled sunlight shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOhp8G-uan1f4LMCDYadnWo2EVwLM_-Ux9ZH-_NinrY-iTlScihwHBeV8W_5SUQCLwFezMVKRpbmMIg5kpSpT0juy7eHowdwmRABUKF6mgNfGoxCx5QxuUD70AejPuV903gtUiZbPUGnspcWGKDOm7BsFAJKFIRsUnshQW5wD1cClPhKsCtq-D8DL7O6n0QwcqeIyMVIl53lWQ0m4PLrNeSnqyg7zyq1Z0zNVdl7y6hZ5ghN8q_ukT_jYBnIlBax4qUNFy9b4VkQs"/>
+<a class="inline-flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300" href="#">
+                        Begin Journey
+                        <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Nutrition Coaching - Horizontal Card -->
+<div class="md:col-span-6 bg-surface-container rounded-xl p-8 group">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/2">
+<div class="inline-flex items-center justify-center w-12 h-12 bg-primary-container/20 rounded-full mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+</div>
+<h2 class="text-3xl font-headline text-on-surface mb-4">Nutrition</h2>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                            Holistic dietary guidance that treats food as medicine and nourishment for your unique lifestyle.
+                        </p>
+<a class="inline-flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300" href="#">
+                            View Plans
+                            <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="md:w-1/2 overflow-hidden rounded-xl">
+<img alt="Healthy bowl" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700" data-alt="Artistic overhead shot of fresh organic vegetables and herbal tea on a rustic ceramic plate with natural earthy textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEffw72o0z7fwARUKFPZfctLwgsIcpKRqOcO9391j2T6KOTqRFV5Dov0oAfJOM9le-qNmx5GjhWN4oFM0s5ePjnfuqvraMLhDk2VV_Ih791iWSfgS9s-LSUsxYxwS8U9jaNFa2jWL2wmoohBZeCib6sP6X-31c2GcSzsPeY70isncV9wcR__cRQLvzC9fZjDqjpY8erS3-i9b7y6-nTSaX-0Fdz4FbZUk2g0aXwZ9H77Qioxoyo5F22wopZA49P4bK3o4M8V47rnU"/>
+</div>
+</div>
+</div>
+<!-- Healing Sessions - Subtle Tonal Card -->
+<div class="md:col-span-6 bg-surface-container-highest rounded-xl p-8 flex flex-col justify-between group border border-outline-variant/10">
+<div>
+<div class="inline-flex items-center justify-center w-12 h-12 bg-primary-container/20 rounded-full mb-6 text-primary">
+<span class="material-symbols-outlined" data-icon="tempest">storm</span>
+</div>
+<h2 class="text-3xl font-headline text-on-surface mb-4">Healing</h2>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                        Integrative therapies including Sound Bathing, Reiki, and Somatic Release to facilitate deep energetic restoration.
+                    </p>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-primary-fixed overflow-hidden">
+<img alt="Practitioner" data-alt="Portrait of a smiling professional female wellness practitioner with natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArsHa-se8h_dQNVLO9ZYi1pqQ1z4fGNHSX7ihBrWsgGPsZGiwvvmnvFnz6jU_Hpb455ikBuR9hPIn6hsn2JEW0K2SCPKgfVDYPd54lKBZ3NrYNP66RPEEVnNFatjXWYTXwkxI5cUk3-nQPCnI1tC8LR37S8i-pnK1FGzLz4v-a7Dtyim4hDsWHEStLdTHqDsTL7wVohUqwKWimRZiVdd8ILzOIUDu1iouwrlHYJIKmsWG96Bi2ohSaorUcoogfttrwN_dO0isRr38"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-secondary-fixed overflow-hidden">
+<img alt="Practitioner" data-alt="Portrait of a calm male meditation coach in a white linen shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt7b6eH-vLI-rFZ64xlXlZJMK_FNPRyg94Y6t5BPC-et5S6APsAjMzhMAWt-1uiFMA-kVrczWdSxDP-Fx3tbQEbwkGVz9Y7C3y1h43a5d_qVzo5yBA4fO2y6-hVtPuiN2ZUtOeeoZiGyaPB_gmNtYObXjK0U9J8cHDe3QDqhIY8eCdRLHFukJz49hSlEh7AreyVsdNHqbA79O8Tgf2XQD4OlryXDHu9hixPm1cJWSUnjFORdbqvVXTjyUo97_XXZNQpl7HkB9NAfM"/>
+</div>
+</div>
+<a class="inline-flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300" href="#">
+                        Book Session
+                        <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Featured Section: Experience the Studio -->
+<section class="mt-32 p-12 bg-primary rounded-[3rem] text-on-primary flex flex-col md:flex-row items-center gap-12 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="md:w-1/2 z-10">
+<span class="font-label text-xs uppercase tracking-widest mb-4 block opacity-80">The Breath Collective</span>
+<h2 class="text-4xl md:text-5xl font-headline mb-6 leading-tight">Private Sanctuary Hire</h2>
+<p class="text-lg opacity-90 mb-8 leading-relaxed">
+                    Our studio is available for intimate retreats, corporate wellness days, or private small-group workshops. Experience a space where every detail is tuned for tranquility.
+                </p>
+<button class="bg-surface text-primary px-8 py-3 rounded-full font-label text-sm uppercase tracking-widest hover:bg-primary-container transition-colors duration-300">
+                    Enquire Today
+                </button>
+</div>
+<div class="md:w-1/2 relative z-10">
+<img alt="Studio interior" class="rounded-xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500" data-alt="Interior of an empty luxury yoga studio with vaulted ceilings, minimalist decor, and a wall of mirrors reflecting soft greenery outside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1lCB12rKOnrThEyyz6-sE2vi1XxUHXoLZQldojb3OE6VZwrKhx1t5B2GFBBiFYYg8A7CIkJE3uadccdV4uvb-0tfIBycRPHYlwm3csCW7MGREukkErTz3vz-zKaot9NCSFFgaJ4BTl-UPB3Hb1ZJf1KRMkJS8xdr-bLj_qLqc7tDVwUTnjm-diE3JCqIyeudeDgFUIHByZFkibr-weTDhzqtehi_InsehAAwb7PrMj_dvXhRJ4R7VZc8e5M8HMH9D_4wodUPzUGg"/>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-surface-container-low dark:bg-zinc-950">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-serif text-primary">The Breath</div>
+<p class="font-sans text-sm uppercase tracking-widest text-tertiary leading-loose">
+                    Cultivating Presence through movement and stillness.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-sans text-sm uppercase tracking-widest text-primary font-bold">Discover</h4>
+<div class="flex flex-col space-y-2">
+<a class="text-tertiary hover:text-primary transition-transform hover:translate-y-[-2px] text-sm uppercase tracking-widest" href="#">Locations</a>
+<a class="text-tertiary hover:text-primary transition-transform hover:translate-y-[-2px] text-sm uppercase tracking-widest" href="#">Instagram</a>
+<a class="text-tertiary hover:text-primary transition-transform hover:translate-y-[-2px] text-sm uppercase tracking-widest" href="#">Pinterest</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-sans text-sm uppercase tracking-widest text-primary font-bold">Connect</h4>
+<div class="flex flex-col space-y-2">
+<a class="text-tertiary hover:text-primary transition-transform hover:translate-y-[-2px] text-sm uppercase tracking-widest" href="#">Contact</a>
+<a class="text-tertiary hover:text-primary transition-transform hover:translate-y-[-2px] text-sm uppercase tracking-widest" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 pb-8 flex flex-col md:flex-row justify-between items-center text-tertiary opacity-60 text-[10px] uppercase tracking-widest">
+<p>© 2024 The Breath Wellness Studio. All rights reserved.</p>
+<div class="mt-4 md:mt-0 flex items-center gap-4">
+<span class="material-symbols-outlined text-sm" data-icon="eco">eco</span>
+<span>Sustainably Sourced Practice</span>
+</div>
+</div>
+</footer>
+</body></html>

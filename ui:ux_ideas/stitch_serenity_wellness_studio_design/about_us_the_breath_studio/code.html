@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | The Breath Wellness Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#56642b",
+                        "primary-fixed": "#d9eaa3",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#d0c97b",
+                        "on-secondary-container": "#696522",
+                        "on-secondary-fixed": "#1e1c00",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary-fixed-variant": "#3e4c16",
+                        "on-tertiary-fixed-variant": "#584324",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#efeeeb",
+                        "primary-container": "#8a9a5b",
+                        "surface": "#faf9f6",
+                        "inverse-primary": "#bdce89",
+                        "surface-container-low": "#f4f3f1",
+                        "background": "#faf9f6",
+                        "secondary-container": "#e9e392",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#725a39",
+                        "surface-bright": "#faf9f6",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1a1c1a",
+                        "tertiary-fixed-dim": "#e1c299",
+                        "on-secondary-fixed-variant": "#4c4805",
+                        "on-primary-container": "#253000",
+                        "on-tertiary-container": "#3b290c",
+                        "secondary": "#65601e",
+                        "on-tertiary-fixed": "#281801",
+                        "surface-variant": "#e3e2e0",
+                        "on-primary-fixed": "#161f00",
+                        "on-surface": "#1a1c1a",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f312f",
+                        "tertiary-container": "#aa8f69",
+                        "outline": "#76786b",
+                        "tertiary-fixed": "#feddb3",
+                        "secondary-fixed": "#ece594",
+                        "surface-container-high": "#e9e8e5",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dbdad7",
+                        "primary-fixed-dim": "#bdce89",
+                        "surface-tint": "#56642b",
+                        "on-surface-variant": "#46483c",
+                        "outline-variant": "#c6c8b8",
+                        "inverse-on-surface": "#f2f1ee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #faf9f6; color: #1a1c1a; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-2xl font-serif italic text-primary dark:text-primary-container" href="#">The Breath</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-sans text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Classes</a>
+<a class="font-sans text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Workshops</a>
+<a class="font-sans text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Retreats</a>
+<a class="font-sans text-sm uppercase tracking-widest text-primary font-semibold border-b-2 border-primary pb-1" href="#">About</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-2.5 rounded-full font-semibold hover:scale-102 transition-all duration-300">
+                Book Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
+<div class="relative grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="text-tertiary font-label text-sm uppercase tracking-[0.3em] mb-6 block">Our Sanctuary</span>
+<h1 class="text-6xl md:text-7xl font-serif text-primary leading-tight mb-8">
+                    Where stillness <br/> meets <span class="italic">strength</span>.
+                </h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                    Founded on the principles of organic movement and mindful presence, The Breath is more than a studio—it is a sanctuary for the modern soul to reconnect with its natural rhythm.
+                </p>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl transform rotate-2">
+<img class="w-full h-full object-cover" data-alt="peaceful yoga studio interior with floor-to-ceiling windows, soft morning light, and natural wood floors with stacked mats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlTbUmRn4L8yKmTkEOS5btynDP1upG94Pe5jCzUub7jR5l38nhI41nfGD4Y4DsPrtfTfWHQMAw4GaSHDRK8skw5c1JA9yuz537KmArh5IW9yRhlKcXn-sHWXIoabiF7Efqqv7-Pkz4sGuC1fKz5_XCqv9mw2IAYMb9Yrbn4XfJVab0U5YcRvP1UBeS0Ja5WgKxVPeFgjXl9u2UdJj1pWSTH0ZMmLKB0omdu0H5tqP14xh5luUzWfHkTVOWy7zqdFmGcYR_dfGfnPg"/>
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</header>
+<!-- Our Story Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/2">
+<div class="relative">
+<img class="rounded-xl shadow-lg -rotate-2 relative z-10" data-alt="Close up of hands holding a ceramic cup of herbal tea in a serene, naturally lit environment with earthy textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGsc--ON7Mf1mKt_v_cMawAQB-yv0hbGRVZRzPCjsBqK0K5gRaYgysPgfz5THeirlwa7ChIk5tGWBrP0rjRySnSaAxTMnnuvVt48PTdXbmvXYfO4BtIGws9Nl0cxtamiFkloWBbRZyYXhIpXIJvKkVRVynAbhZ0-N2_uk6qPE-7xOCFme5VabRRl2VZsEPpWkfKDXPdVp4LvuC1JIgxFEaYH5dfW9Q_ujXAyOXVLXklNmu2LwE2pm9EWM7VAXFVMduibWYinLeEDs"/>
+<div class="absolute top-10 -right-10 w-full h-full border-2 border-primary-container/30 rounded-xl -z-0"></div>
+</div>
+</div>
+<div class="md:w-1/2 space-y-6">
+<h2 class="text-4xl font-serif text-primary">Our Story</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                        What started as a small gathering in a sun-drenched attic has grown into a community of seekers. In 2016, our founder Elena sought to bridge the gap between rigorous athletic discipline and the profound silence of meditative practice.
+                    </p>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                        The Breath was born from the belief that wellness is not a destination to be reached, but a state of being that is cultivated through consistency, community, and the courage to be still. Every corner of our space is intentionally designed to evoke the calm of the natural world.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Values Bento Grid -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-serif text-primary mb-4">Rooted in Purpose</h2>
+<p class="text-tertiary uppercase tracking-widest text-sm">The pillars that sustain our community</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-10 rounded-xl flex flex-col justify-between h-full hover:bg-primary-container/10 transition-all duration-500">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">eco</span>
+<h3 class="text-2xl font-serif text-primary mb-4">Organic Growth</h3>
+<p class="text-on-surface-variant leading-relaxed">We believe in honoring the unique pace of every individual. Progress here is measured in presence, not just flexibility.</p>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-10 rounded-xl flex flex-col justify-between h-full md:row-span-2 shadow-xl">
+<div>
+<span class="material-symbols-outlined text-on-primary text-4xl mb-6">diversity_2</span>
+<h3 class="text-3xl font-serif mb-6">Inclusive Community</h3>
+<p class="opacity-90 text-lg leading-relaxed mb-8">The Breath is a home for everyone—regardless of age, ability, or background. We cultivate a space where diversity is the soil in which we all grow.</p>
+<div class="h-1 w-20 bg-primary-container"></div>
+</div>
+<div class="mt-12 overflow-hidden rounded-lg">
+<img class="w-full h-48 object-cover opacity-80 mix-blend-luminosity" data-alt="Group of diverse people sitting in a circle on yoga mats in a sun-filled room laughing together" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBq9Uk93Mcpa2AahBhze6WMWIYUIdad1Ij_pTrjDit_hHd9TL3ldP18BfzVFBe0zWFJvNUKRb-oHQLofhFtff6Kkxf0oij7ydARAkwfkS9k8BDmltts57vicRzMxd6vNcdvuyA3q5e0ZgCwQSZyHdkIl_hiHbVL3B9t2jPcGDVoAgl1k7UsWK2OWiV2aipeLJKtjI_5Rdl3bHYtQc5_XmoCkJiowhnktPYG9LCzZQbQcUixT6JVvC1-a4F8Mn-jk6vzJIlEwxr5gc"/>
+</div>
+</div>
+<div class="bg-surface-container p-10 rounded-xl flex flex-col justify-between h-full hover:bg-primary-container/10 transition-all duration-500">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">verified</span>
+<h3 class="text-2xl font-serif text-primary mb-4">Scientific Expertise</h3>
+<p class="text-on-surface-variant leading-relaxed">Our teachings are grounded in both ancient wisdom and modern anatomical science, ensuring a practice that is safe, effective, and deeply healing.</p>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container-high p-10 rounded-xl flex items-center justify-center">
+<div class="text-center">
+<span class="text-5xl font-serif text-primary block mb-2">500+</span>
+<span class="text-tertiary text-sm uppercase tracking-widest">Certified Hours Required</span>
+</div>
+</div>
+<div class="bg-surface-container p-10 rounded-xl flex flex-col justify-between h-full hover:bg-primary-container/10 transition-all duration-500">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">self_improvement</span>
+<h3 class="text-2xl font-serif text-primary mb-4">Mindful Living</h3>
+<p class="text-on-surface-variant leading-relaxed">The practice doesn't end on the mat. We provide tools to carry mindfulness into every aspect of daily life.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Instructor Highlight -->
+<section class="py-24 bg-white relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-serif text-primary mb-4">The Guiding Hands</h2>
+<p class="text-lg text-on-surface-variant">Our instructors are more than teachers; they are lifelong practitioners and experts in their respective disciplines, committed to your personal evolution.</p>
+</div>
+<a class="text-primary font-semibold flex items-center gap-2 group" href="#">
+                    View All Instructors
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Instructor 1 -->
+<div class="group">
+<div class="relative mb-6 overflow-hidden rounded-xl">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Portrait of a serene female yoga instructor with a gentle smile, wearing olive green athletic wear in a soft-lit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbucp7yrviC1MuEmQ9n2V9XsXbINeHAeic7APsSFbbBloy-XV_ML9iKxMtN4_pNmziFOysSGU-bc3w93h0AibdXvVk8XoIL37F_WTvgn412naJFMAfdU1iXPp8CRX4A0zvV8WU3oYXr3ryalhR2iduE1jHUg_GDRa2p6vTDA6DZZDF5r9gdlLcLEnUt6TixkbckN9CTpUTm0xHVrlA5gZ5hUU-MYd-gXnn4O0Ch48gI3igYSvck2Se8MuH_1Bs3AR-bzz6DSjF4eI"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<h3 class="text-2xl font-serif text-primary">Elena Thorne</h3>
+<p class="text-tertiary text-sm uppercase tracking-widest mb-4">Founder &amp; Lead Vinyasa</p>
+<p class="text-on-surface-variant text-sm leading-relaxed italic">
+                        "I believe that movement is the most honest form of conversation with oneself."
+                    </p>
+</div>
+<!-- Instructor 2 -->
+<div class="group">
+<div class="relative mb-6 overflow-hidden rounded-xl">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Portrait of a focused male yoga teacher in a meditation pose, natural lighting, serene atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY_iPT2f8k6nISstmRLmmwfIStM8qDFNd6jFUulRfCz1zRjw45SiLXdvmnyrbi7SxcLVQ6sEUMSP5roWQSOs5wsZYax7ePzHsmvnm3RpV2pSCVJ4nBzJqgqupWKEpbsmLJayFCIHy4C-xfsWxk6uDFCRrDOxBkqd88-EvSK9YWTf0V4tWEPPuzHdpyWHJY5LvqUk_T7pJpmDCp5fTrIVbox1KMvjoGAP5RxaYvokLE5XWFbiLWmKNwfy3Nn_398inCuE3ghE9x-aQ"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<h3 class="text-2xl font-serif text-primary">Marcus Chen</h3>
+<p class="text-tertiary text-sm uppercase tracking-widest mb-4">Ashtanga &amp; Breathwork Expert</p>
+<p class="text-on-surface-variant text-sm leading-relaxed italic">
+                        "Breath is the bridge that connects the body to the mind, and the mind to the spirit."
+                    </p>
+</div>
+<!-- Instructor 3 -->
+<div class="group">
+<div class="relative mb-6 overflow-hidden rounded-xl">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Woman instructor with a warm expression, sitting cross-legged in a studio with soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcGIOGz66RZ6On_e9lYnY3wUD8XZErodOsLRe7UiN6wa6yFI9MMF3x_Ug8fQiBVo8bTlkjF5KqTLYqaG2ZJAErkH7fFYV1lLpFXy4xTDLBQFL9Z4yMje6-4YCavKKi0OBRWqePSe1LhKAHiiF64nK54m5Gvm183EN79quMPsSMNzuX9Lt5g198BBxM7j-ChJZYlx7tTLYGx8rdETYdYBNR7uWQuxvxpGWf-boLjua-lb4MmFRNT1KJUnpNMLeKE5I6DjRdwgoK3Fo"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<h3 class="text-2xl font-serif text-primary">Sasha Reeves</h3>
+<p class="text-tertiary text-sm uppercase tracking-widest mb-4">Yin &amp; Restorative Guide</p>
+<p class="text-on-surface-variant text-sm leading-relaxed italic">
+                        "Finding power in the pause is where the most profound transformation occurs."
+                    </p>
+</div>
+</div>
+</div>
+<!-- Background Organic Shape -->
+<div class="absolute -bottom-40 -right-40 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl -z-0"></div>
+</section>
+<!-- Trust & Credibility Section -->
+<section class="py-24 bg-surface-container-low text-center">
+<div class="max-w-4xl mx-auto px-8">
+<span class="material-symbols-outlined text-primary text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<h2 class="text-3xl font-serif text-primary mb-8">Guided by Global Standards</h2>
+<div class="flex flex-wrap justify-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex flex-col items-center">
+<span class="text-xl font-bold tracking-tighter text-on-surface">YOGA ALLIANCE</span>
+<span class="text-xs">RYS 200/500</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-xl font-bold tracking-tighter text-on-surface">NASM</span>
+<span class="text-xs">CERTIFIED PARTNER</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-xl font-bold tracking-tighter text-on-surface">WELLNESS PRO</span>
+<span class="text-xs">ACCREDITED FACILITY</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] bg-surface-container-low dark:bg-zinc-950 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<a class="text-xl font-serif text-primary" href="#">The Breath</a>
+<p class="text-tertiary text-sm font-sans uppercase tracking-widest max-w-xs">A space for organic movement and conscious stillness.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<a class="text-tertiary text-sm uppercase tracking-widest hover:text-primary transition-transform hover:translate-y-[-2px]" href="#">Locations</a>
+<a class="text-tertiary text-sm uppercase tracking-widest hover:text-primary transition-transform hover:translate-y-[-2px]" href="#">Instagram</a>
+<a class="text-tertiary text-sm uppercase tracking-widest hover:text-primary transition-transform hover:translate-y-[-2px]" href="#">Pinterest</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="text-tertiary text-sm uppercase tracking-widest hover:text-primary transition-transform hover:translate-y-[-2px]" href="#">Privacy Policy</a>
+<a class="text-tertiary text-sm uppercase tracking-widest hover:text-primary transition-transform hover:translate-y-[-2px]" href="#">Contact</a>
+</div>
+</div>
+<div class="flex flex-col justify-between items-end">
+<div class="text-right">
+<p class="text-primary font-bold font-sans text-sm uppercase tracking-widest mb-2">Subscribe to the ritual</p>
+<div class="flex border-b border-primary/20 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-tertiary/50" placeholder="Email Address" type="email"/>
+<button class="material-symbols-outlined text-primary">arrow_forward</button>
+</div>
+</div>
+<p class="text-tertiary text-[10px] uppercase tracking-[0.2em] mt-12">© 2024 The Breath Wellness Studio. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

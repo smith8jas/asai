@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #56642b;
+  --color-primary-container: #8a9a5b;
+  --color-primary-fixed: #d9eaa3;
+  --color-primary-fixed-dim: #bdce89;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #253000;
+
+  --color-surface: #faf9f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f4f3f1;
+  --color-surface-container: #efeeeb;
+  --color-surface-container-high: #e9e8e5;
+  --color-surface-container-highest: #e3e2e0;
+  --color-surface-dim: #dbdad7;
+
+  --color-on-surface: #1a1c1a;
+  --color-on-surface-variant: #46483c;
+  --color-outline: #76786b;
+  --color-outline-variant: #c6c8b8;
+
+  --color-tertiary: #725a39;
+  --color-tertiary-container: #aa8f69;
+  --color-on-tertiary: #ffffff;
+
+  --color-secondary: #65601e;
+  --color-secondary-container: #e9e392;
+
+  --color-inverse-surface: #2f312f;
+  --color-inverse-on-surface: #f2f1ee;
+
+  --font-serif: "Noto Serif", Georgia, serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: #1a1c1a;
+  background-color: #faf9f6;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.stagger-children.is-visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(5) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(6) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+
+/* Breath pulse animation */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.2; }
+  50% { transform: scale(1.5); opacity: 0; }
+}
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}

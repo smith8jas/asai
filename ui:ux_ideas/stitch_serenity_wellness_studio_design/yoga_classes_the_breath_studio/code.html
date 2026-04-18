@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#56642b",
+                    "primary-fixed": "#d9eaa3",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#d0c97b",
+                    "on-secondary-container": "#696522",
+                    "on-secondary-fixed": "#1e1c00",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e3e2e0",
+                    "on-primary-fixed-variant": "#3e4c16",
+                    "on-tertiary-fixed-variant": "#584324",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#efeeeb",
+                    "primary-container": "#8a9a5b",
+                    "surface": "#faf9f6",
+                    "inverse-primary": "#bdce89",
+                    "surface-container-low": "#f4f3f1",
+                    "background": "#faf9f6",
+                    "secondary-container": "#e9e392",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#725a39",
+                    "surface-bright": "#faf9f6",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1a1c1a",
+                    "tertiary-fixed-dim": "#e1c299",
+                    "on-secondary-fixed-variant": "#4c4805",
+                    "on-primary-container": "#253000",
+                    "on-tertiary-container": "#3b290c",
+                    "secondary": "#65601e",
+                    "on-tertiary-fixed": "#281801",
+                    "surface-variant": "#e3e2e0",
+                    "on-primary-fixed": "#161f00",
+                    "on-surface": "#1a1c1a",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2f312f",
+                    "tertiary-container": "#aa8f69",
+                    "outline": "#76786b",
+                    "tertiary-fixed": "#feddb3",
+                    "secondary-fixed": "#ece594",
+                    "surface-container-high": "#e9e8e5",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dbdad7",
+                    "primary-fixed-dim": "#bdce89",
+                    "surface-tint": "#56642b",
+                    "on-surface-variant": "#46483c",
+                    "outline-variant": "#c6c8b8",
+                    "inverse-on-surface": "#f2f1ee"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Noto Serif', serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-serif italic text-primary dark:text-primary-container">The Breath</div>
+<div class="hidden md:flex items-center space-gap-8 gap-x-8">
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-serif text-lg tracking-tight" href="#">Classes</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:opacity-80 transition-all duration-300" href="#">Workshops</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:opacity-80 transition-all duration-300" href="#">Retreats</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-serif text-lg tracking-tight hover:opacity-80 transition-all duration-300" href="#">About</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-sm uppercase tracking-widest hover:scale-102 transition-all duration-300">Book Now</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Serene woman practicing yoga in a sun-drenched minimalist studio with warm wooden floors and soft olive green accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmen8qYSQ3xl4zzEsAY6AElnLMQdO6X8vzXAL2WkAE2NTg8mRUimZFrBFxaMIUXeQ132PWmxMqMsG9T1GFy5KG1QbVgJlzoIYgMF5iFa0FRned45GjpO-e4EqKBBDw3lKT0V_LFKKpcH_iVXGcKmLfUtX7VaJG_nC1x6r3OQEynGsjh65zCC7qJa5Lin1h-EngRpgG6aEYzc1Vh2KVBEtqWiNtcbRKcBENCbqhjgJUTT7aRHSzTrthCc0dF_cE-AMSi75TU0qXhLY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1.5 bg-primary-container/20 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6">Reconnect &amp; Restore</span>
+<h1 class="text-6xl md:text-8xl font-serif leading-tight mb-8 tracking-tight text-on-surface">Find Your <br/><span class="italic text-primary">Inner Stillness</span></h1>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-lg">Experience a sanctuary designed for the soul. Our curated yoga sessions blend ancient wisdom with modern mindful practice.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/20">View Schedule</button>
+<button class="bg-surface-container-highest/50 backdrop-blur-md px-10 py-4 rounded-full font-bold text-lg hover:bg-surface-container-highest transition-colors">Our Ethos</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Class Types Bento -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="mb-20 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl md:text-5xl font-serif mb-6 text-on-surface">Curated Practices</h2>
+<p class="text-on-surface-variant text-lg">Every body is different. Every journey is unique. Explore our diverse range of classes designed to meet you exactly where you are today.</p>
+</div>
+<div class="hidden md:block h-[1px] flex-1 bg-outline-variant/30 mb-4 mx-12"></div>
+<div class="text-primary font-serif italic text-2xl">Vinyasa · Hatha · Yin</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Vinyasa -->
+<div class="md:col-span-8 group relative rounded-[3rem] overflow-hidden aspect-[16/9] md:aspect-auto h-[500px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of graceful yoga movement focused on flow and breath in a brightly lit studio with natural textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnzAMp-Mf0jZJ-XCKpq2I9rNMw0wJvUaBEN_KBGOQl2KLBFFwcqldPvO0ix7QU36FACHjOVuXqoEz4iwOg3tPOuvHhgHLQZmLQoqkdazMgNcGzOb1LIPRXoF_F2OuoX0yCWLMb5-nwkTtUCWIWwDmgmyfDOSUJ5qS2dL5sq3Jyy7btbTdsSJleqx33yYFryrnctdKbgkYGrXn4eSFVBA7Jt62PEFn27TvFQsHK7-Kuofs9gyBvS5w-SnFgP68rqCW532Tsy_9nLjU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-12 w-full">
+<h3 class="text-white text-4xl font-serif mb-4">Vinyasa Flow</h3>
+<p class="text-white/80 text-lg max-w-md mb-6">A dynamic sequence of postures that synchronize breath with movement, building heat, strength, and internal focus.</p>
+<div class="flex items-center gap-2 text-white font-bold">
+<span>Explore Class</span>
+<span class="material-symbols-outlined">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Benefits Mini Card -->
+<div class="md:col-span-4 bg-primary-container text-on-primary-container p-12 rounded-[3rem] flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">spa</span>
+<h3 class="text-3xl font-serif mb-4">Holistic Wellness</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>Reduced Cortisol &amp; Stress Levels</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>Enhanced Physical Flexibility</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span>Mental Clarity &amp; Mindfulness</span>
+</li>
+</ul>
+</div>
+<!-- Hatha -->
+<div class="md:col-span-6 group relative rounded-[3rem] overflow-hidden h-[450px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A person holding a steady hatha yoga pose with focused calm expression in a minimalist earth-toned space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCELztWPEZBwqhqTlHKy5k-5xQEdYooo27rrFC5RwtySH_VhstRTo6qcMLFPMfy-yk7TSVCnoMevbwXKxu540oNLobmQEACOy4VED4Kp8DJaLfx0KqstkZMS-jOqPMh1gJiJ_uWyTBR97ejTeXF6eCH4nulaPvHOrjTA-IZLWF4uQdRjF02nBF9n-j0Npg_U9wriGxmPZswLFiSYD6rfUEt_7hAIGzGBHnyIHIjh9b9sEDW1KdqiPL4KhNyV1ie5e6OBeyVL3fhDWQ"/>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute top-12 left-12 right-12">
+<h3 class="text-white text-3xl font-serif mb-2">Gentle Hatha</h3>
+<p class="text-white/90 text-sm uppercase tracking-widest font-bold">Foundation &amp; Alignment</p>
+</div>
+<div class="absolute bottom-12 left-12 p-4 rounded-full bg-surface/30 backdrop-blur-md text-white">
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+<!-- Yin -->
+<div class="md:col-span-6 group relative rounded-[3rem] overflow-hidden h-[450px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Detail of person in a deep stretch yoga pose using a bolster in a soft lit sanctuary with textured walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCthv-0eS3D7lA3rT7-41Acm8COIIFxzhlUwDdCKXYQUpmsJNAyE8TLoFvVdP_B8-iAsZNL7YdhXUvEFo4X9VM6ltd0lDqcEXmagnLBntQxClF4jl5tUIdIb425AvejmmFE_rpHpvbz7Uo14WxKCwsUIEf0rFm-8pJ6L3RTbj7KXaJSQawdzFMuWLf0IOPe7gTKceJmNm_2IRW1LpQ695FrjhBRj_8yyl2MTfwojgbjQ3wtHfalI3vUr3i5MLrWVgLW9zjfGFxYmKo"/>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute top-12 left-12 right-12">
+<h3 class="text-white text-3xl font-serif mb-2">Restorative Yin</h3>
+<p class="text-white/90 text-sm uppercase tracking-widest font-bold">Stillness &amp; Release</p>
+</div>
+<div class="absolute bottom-12 left-12 p-4 rounded-full bg-surface/30 backdrop-blur-md text-white">
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Weekly Schedule Section -->
+<section class="bg-surface-container-low py-32 rounded-t-[5rem]">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="text-5xl font-serif mb-6 text-on-surface">Weekly Schedule</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Join our community in our sun-filled studio. We offer daily practices led by master instructors.</p>
+</div>
+<div class="flex overflow-x-auto pb-12 gap-6 no-scrollbar snap-x">
+<!-- Day 1 (Active) -->
+<div class="snap-center flex-shrink-0 w-80 bg-surface-container-high rounded-[2.5rem] p-8 border-2 border-primary-container shadow-xl">
+<h4 class="text-primary font-bold text-lg mb-8 uppercase tracking-tighter">Monday</h4>
+<div class="space-y-8">
+<div class="relative pl-6 border-l-2 border-primary/20">
+<p class="text-xs text-primary font-bold uppercase mb-1">07:00 AM</p>
+<p class="font-serif text-lg">Sunrise Vinyasa</p>
+<p class="text-sm text-tertiary">Instructor: Sarah M.</p>
+</div>
+<div class="relative pl-6 border-l-2 border-primary/20">
+<p class="text-xs text-primary font-bold uppercase mb-1">12:30 PM</p>
+<p class="font-serif text-lg">Lunch Flow</p>
+<p class="text-sm text-tertiary">Instructor: David K.</p>
+</div>
+<div class="relative pl-6 border-l-2 border-primary/20">
+<p class="text-xs text-primary font-bold uppercase mb-1">06:00 PM</p>
+<p class="font-serif text-lg">Hatha Foundation</p>
+<p class="text-sm text-tertiary">Instructor: Elena R.</p>
+</div>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="snap-center flex-shrink-0 w-80 bg-surface-container-low rounded-[2.5rem] p-8">
+<h4 class="text-on-surface-variant font-bold text-lg mb-8 uppercase tracking-tighter opacity-50">Tuesday</h4>
+<div class="space-y-8">
+<div class="relative pl-6 border-l-2 border-outline-variant/30">
+<p class="text-xs text-on-surface-variant font-bold uppercase mb-1">09:00 AM</p>
+<p class="font-serif text-lg">Restorative Yin</p>
+<p class="text-sm text-tertiary">Instructor: Chloe L.</p>
+</div>
+<div class="relative pl-6 border-l-2 border-outline-variant/30">
+<p class="text-xs text-on-surface-variant font-bold uppercase mb-1">05:30 PM</p>
+<p class="font-serif text-lg">Power Vinyasa</p>
+<p class="text-sm text-tertiary">Instructor: Marc J.</p>
+</div>
+</div>
+</div>
+<!-- Day 3 -->
+<div class="snap-center flex-shrink-0 w-80 bg-surface-container-low rounded-[2.5rem] p-8">
+<h4 class="text-on-surface-variant font-bold text-lg mb-8 uppercase tracking-tighter opacity-50">Wednesday</h4>
+<div class="space-y-8">
+<div class="relative pl-6 border-l-2 border-outline-variant/30">
+<p class="text-xs text-on-surface-variant font-bold uppercase mb-1">07:00 AM</p>
+<p class="font-serif text-lg">Core Strength</p>
+<p class="text-sm text-tertiary">Instructor: Elena R.</p>
+</div>
+<div class="relative pl-6 border-l-2 border-outline-variant/30">
+<p class="text-xs text-on-surface-variant font-bold uppercase mb-1">06:30 PM</p>
+<p class="font-serif text-lg">Candlelight Flow</p>
+<p class="text-sm text-tertiary">Instructor: Sarah M.</p>
+</div>
+</div>
+</div>
+<!-- Day 4 -->
+<div class="snap-center flex-shrink-0 w-80 bg-surface-container-low rounded-[2.5rem] p-8">
+<h4 class="text-on-surface-variant font-bold text-lg mb-8 uppercase tracking-tighter opacity-50">Thursday</h4>
+<div class="space-y-8">
+<div class="relative pl-6 border-l-2 border-outline-variant/30">
+<p class="text-xs text-on-surface-variant font-bold uppercase mb-1">10:00 AM</p>
+<p class="font-serif text-lg">Prenatal Yoga</p>
+<p class="text-sm text-tertiary">Instructor: Chloe L.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 flex justify-center">
+<div class="inline-flex items-center gap-4 bg-white/50 backdrop-blur-sm p-2 rounded-full border border-outline-variant/20">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-white hover:bg-primary hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<span class="font-label text-xs uppercase tracking-widest px-4">Scroll to explore</span>
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-white hover:bg-primary hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking CTA -->
+<section class="relative py-40 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Soft focused background of a tranquil tea ceremony corner in a yoga studio with natural textures and soft light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsPht4zDb-Kbue4sCmPqveGUPVeIzFy5_aQDT3plCv9jdO04xOan2vrp-sydRDVfcEtydyqqTcpVjXiw9mFZzi47J6UaLcqW7N2NBKoK7gmhCt-BXuyfddakJEQ3oypfXiI9FdUEvyuU6YlMiRhty1xer73HYw_Qn9_My_bOp7aEKQbZi8uMKU04Bj7Lvk9WZhfC28nFL0dUbLr19LT-L_wKGU9hpD2IEPYLwTrbVzENBYbHQg9OM0Ro_WpBzH_HGmKRmaK44Xx5g"/>
+<div class="absolute inset-0 bg-primary/90 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto px-8 text-center text-on-primary">
+<h2 class="text-5xl md:text-7xl font-serif mb-8 leading-tight">Ready to begin your <br/><span class="italic font-normal">transformation?</span></h2>
+<p class="text-xl mb-12 text-on-primary/80 max-w-2xl mx-auto">Your first session is a gift. Join us to experience the power of intentional movement and deep breath.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-surface text-primary px-12 py-5 rounded-full font-bold text-xl hover:scale-105 transition-all shadow-2xl">Book Your First Class</button>
+<button class="border-2 border-white/30 hover:border-white/60 px-12 py-5 rounded-full font-bold text-xl transition-all">Explore Membership</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-zinc-950 w-full rounded-t-[3rem] mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="text-xl font-serif text-primary">The Breath</div>
+<p class="text-tertiary font-sans text-sm tracking-relaxed">An organic sanctuary for the modern soul. Dedicated to the art of presence, movement, and holistic well-being.</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-sans text-sm uppercase tracking-widest text-primary font-bold">Quick Links</h5>
+<nav class="flex flex-col gap-3">
+<a class="text-tertiary hover:text-primary font-sans text-sm uppercase tracking-widest hover:translate-y-[-2px] transition-transform" href="#">Locations</a>
+<a class="text-tertiary hover:text-primary font-sans text-sm uppercase tracking-widest hover:translate-y-[-2px] transition-transform" href="#">Privacy Policy</a>
+<a class="text-tertiary hover:text-primary font-sans text-sm uppercase tracking-widest hover:translate-y-[-2px] transition-transform" href="#">Instagram</a>
+<a class="text-tertiary hover:text-primary font-sans text-sm uppercase tracking-widest hover:translate-y-[-2px] transition-transform" href="#">Pinterest</a>
+<a class="text-tertiary hover:text-primary font-sans text-sm uppercase tracking-widest hover:translate-y-[-2px] transition-transform" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-sans text-sm uppercase tracking-widest text-primary font-bold">Join Our Circle</h5>
+<p class="text-tertiary text-sm">Receive curated mindfulness tips and studio updates.</p>
+<div class="mt-2 flex">
+<input class="bg-surface border-none rounded-l-full px-6 py-3 w-full focus:ring-1 focus:ring-primary text-sm" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-r-full">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 pb-12">
+<div class="h-[1px] bg-outline-variant/20 w-full mb-8"></div>
+<p class="text-tertiary font-sans text-[10px] uppercase tracking-[0.2em] text-center">© 2024 The Breath Wellness Studio. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Breath | Find Your Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;1,400&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "primary": "#56642b",
+                  "primary-fixed": "#d9eaa3",
+                  "on-primary": "#ffffff",
+                  "secondary-fixed-dim": "#d0c97b",
+                  "on-secondary-container": "#696522",
+                  "on-secondary-fixed": "#1e1c00",
+                  "error-container": "#ffdad6",
+                  "surface-container-highest": "#e3e2e0",
+                  "on-primary-fixed-variant": "#3e4c16",
+                  "on-tertiary-fixed-variant": "#584324",
+                  "surface-container-lowest": "#ffffff",
+                  "surface-container": "#efeeeb",
+                  "primary-container": "#8a9a5b",
+                  "surface": "#faf9f6",
+                  "inverse-primary": "#bdce89",
+                  "surface-container-low": "#f4f3f1",
+                  "background": "#faf9f6",
+                  "secondary-container": "#e9e392",
+                  "on-error-container": "#93000a",
+                  "tertiary": "#725a39",
+                  "surface-bright": "#faf9f6",
+                  "on-secondary": "#ffffff",
+                  "on-background": "#1a1c1a",
+                  "tertiary-fixed-dim": "#e1c299",
+                  "on-secondary-fixed-variant": "#4c4805",
+                  "on-primary-container": "#253000",
+                  "on-tertiary-container": "#3b290c",
+                  "secondary": "#65601e",
+                  "on-tertiary-fixed": "#281801",
+                  "surface-variant": "#e3e2e0",
+                  "on-primary-fixed": "#161f00",
+                  "on-surface": "#1a1c1a",
+                  "on-error": "#ffffff",
+                  "on-tertiary": "#ffffff",
+                  "inverse-surface": "#2f312f",
+                  "tertiary-container": "#aa8f69",
+                  "outline": "#76786b",
+                  "tertiary-fixed": "#feddb3",
+                  "secondary-fixed": "#ece594",
+                  "surface-container-high": "#e9e8e5",
+                  "error": "#ba1a1a",
+                  "surface-dim": "#dbdad7",
+                  "primary-fixed-dim": "#bdce89",
+                  "surface-tint": "#56642b",
+                  "on-surface-variant": "#46483c",
+                  "outline-variant": "#c6c8b8",
+                  "inverse-on-surface": "#f2f1ee"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "1.5rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Noto Serif"],
+                  "body": ["Manrope"],
+                  "label": ["Manrope"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body { font-family: 'Manrope', sans-serif; background-color: #faf9f6; color: #1a1c1a; }
+    .font-serif { font-family: 'Noto Serif', serif; }
+  </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-serif italic text-primary dark:text-primary-container">The Breath</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-sans text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Classes</a>
+<a class="font-sans text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Workshops</a>
+<a class="font-sans text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Retreats</a>
+<a class="font-sans text-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label text-sm uppercase tracking-widest hover:scale-102 transition-all duration-300">Book Now</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 px-8 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Calm yoga studio" class="w-full h-full object-cover" data-alt="Interior of a high-end minimalist yoga studio with warm wood floors, soft natural sunlight streaming through large windows, and sage green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-dzCgSxV1IzlQGZHHIvRPwH-xMQZWllzNJhdmqERMaf2jHxWrJiwG90Jm7WJys7VkGO5PVeS3M3dp4kEHNfH0jeinGrtSPZZlhLj5ziR5EWxBvwGL_or0OViBIPJncP-qixvdawXSWB9yRF_YdJOXhth0WV8JtM0S6jVsHFmCMLvLh9548rjYajxcWiVu-6jPFbJ6ZUotiLKW7dh9zx39Srnx9CnR7l333gksvSAhZgtImH3lVdA_A0lAhpO3hjymGXOaKXjwMlw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface/90 via-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto w-full">
+<div class="max-w-2xl">
+<span class="font-label text-sm uppercase tracking-[0.3em] text-tertiary mb-6 block">Est. 2024 • Wellness Sanctuary</span>
+<h1 class="font-serif text-[4rem] md:text-[5.5rem] leading-[1.1] text-on-surface tracking-tight mb-8">
+          Find Your <br/><span class="italic text-primary">Center</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant mb-12 max-w-lg leading-relaxed">
+          A physical and mental sanctuary designed to help you reconnect with your essence through movement, stillness, and breath.
+        </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-full font-label text-sm uppercase tracking-widest hover:scale-105 transition-all duration-300 bg-gradient-to-br from-primary to-primary-container shadow-xl shadow-primary/20">
+            Book a Class
+          </button>
+<button class="bg-white/40 backdrop-blur-md border border-outline-variant/30 text-on-surface px-10 py-5 rounded-full font-label text-sm uppercase tracking-widest hover:bg-white/60 transition-all duration-300">
+            View Schedule
+          </button>
+</div>
+</div>
+</div>
+<!-- Breath Indicator Pulse -->
+<div class="absolute bottom-12 right-12 hidden lg:flex items-center space-x-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center relative">
+<div class="absolute inset-0 rounded-full bg-primary-container animate-ping opacity-20"></div>
+<span class="material-symbols-outlined text-primary">air</span>
+</div>
+<span class="font-serif italic text-primary">Inhale. Exhale.</span>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-7 order-2 md:order-1">
+<div class="relative">
+<img alt="Philosophy detail" class="rounded-xl w-full h-[600px] object-cover shadow-2xl" data-alt="Close up of a serene face with eyes closed, soft lighting highlighting natural skin texture, serene and meditative mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2InVyodQ5Z5lafD8X2gvlvBiyKeoOx_Z4KPb_7VY_k6UGVdUukAOBnL5o-ID-bIFlWEZj_McQHsqWh9vyPikt6JXDkkPFnvLed7spub-Z_8Tryl5YxtDGn4fmFemr8ri7uujM5nNSO81K7nR5g2FUU9JuKIfK5jlk8mOLOaVLV0Sa_noU0vxk27tZWtvYXbE7ua5OCN2d6zxPWpe-Jpe6ZILW-_DvorKk8sB74YyzXOcE5JNI6RYi9GCLDf75nWu7jnFJhOA3-vQ"/>
+<div class="absolute -bottom-10 -right-10 hidden lg:block w-64 h-64 bg-surface-container-low rounded-xl p-8 shadow-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">spa</span>
+<p class="font-serif italic text-on-surface text-lg">"The soul always knows what to do to heal itself."</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 order-1 md:order-2">
+<h2 class="font-serif text-4xl md:text-5xl text-on-surface mb-8 leading-tight">The Space Between <br/>the Breaths</h2>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed mb-6">
+          At The Breath, we believe that wellness is not a destination, but a rhythmic practice of returning to yourself. Our studio is built on the pillars of intentionality, organic growth, and communal support.
+        </p>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed mb-10">
+          We strip away the noise of the digital world to provide a tactile sanctuary of paper, wood, and light. Here, every movement is an invitation to listen to your body's innate wisdom.
+        </p>
+<div class="flex items-center space-x-4 group cursor-pointer">
+<span class="font-label text-sm uppercase tracking-widest text-primary border-b-2 border-primary-container pb-1 transition-all group-hover:pr-4">Our Story</span>
+<span class="material-symbols-outlined text-primary text-sm group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Section -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<span class="font-label text-sm uppercase tracking-widest text-tertiary mb-4 block">Curated Offerings</span>
+<h2 class="font-serif text-4xl md:text-5xl text-on-surface leading-tight">Elevate Your Practice</h2>
+</div>
+<p class="max-w-md text-on-surface-variant font-body">Integrated wellness paths tailored for modern living, focusing on holistic alignment of body and mind.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Yoga Card -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-xl overflow-hidden transition-transform hover:-translate-y-2">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-3xl mb-6">self_improvement</span>
+<h3 class="font-serif text-2xl text-on-surface mb-4">Yoga</h3>
+<p class="font-body text-on-surface-variant mb-8 leading-relaxed">From restorative Hatha to dynamic Vinyasa, find the flow that serves your energy today.</p>
+<ul class="space-y-3 mb-10">
+<li class="flex items-center text-sm font-label uppercase tracking-wider text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container mr-3"></span> Private Sessions
+              </li>
+<li class="flex items-center text-sm font-label uppercase tracking-wider text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container mr-3"></span> Group Immersion
+              </li>
+</ul>
+</div>
+<img alt="Yoga practice" class="absolute -bottom-10 -right-10 w-48 h-48 object-cover rounded-full opacity-10 group-hover:scale-110 transition-transform duration-700" data-alt="A person in a peaceful yoga pose on a sage green mat in a sun-drenched minimalist room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdhfXI3VJm3DhU5Bro0oXuoxfNPz8WdnSuXENVJ1RIl1vOJhWXG5P91sS7sUvMqvnVOAJMP7vw3o1fPMAtK-qL_BJHRpukBTZpZ6L-0sDb6sZVHjlCPrw64QekcSMMjKjkB8zzDm-hJc0XzZ-kBg-aCu6z0lOJ0BV7iqIT3SE-fLvHXpzywJgenxWC6WEGiZqQgHwtHm_OCL5kuVcj4SbGJWBpuL4I5BZkbYSv8Piite5zQYHNYcXvlZRTgEqDKBMzLsYBBEdmb1Q"/>
+</div>
+<!-- Meditation Card -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-xl overflow-hidden transition-transform hover:-translate-y-2">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-3xl mb-6">psychology_alt</span>
+<h3 class="font-serif text-2xl text-on-surface mb-4">Meditation</h3>
+<p class="font-body text-on-surface-variant mb-8 leading-relaxed">Guided journeys into the silent spaces of the mind. Sound baths and breathwork techniques.</p>
+<ul class="space-y-3 mb-10">
+<li class="flex items-center text-sm font-label uppercase tracking-wider text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container mr-3"></span> Sound Healing
+              </li>
+<li class="flex items-center text-sm font-label uppercase tracking-wider text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container mr-3"></span> Mindfulness Labs
+              </li>
+</ul>
+</div>
+<img alt="Meditation space" class="absolute -bottom-10 -right-10 w-48 h-48 object-cover rounded-full opacity-10 group-hover:scale-110 transition-transform duration-700" data-alt="A collection of singing bowls and white candles on a textured linen surface with soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA21jDO2UDm7xBS4hKiXGCvGu9ky3OvoZk9UVrkBYpTHCAMZmDrL3l-p-qImLYh2giR1fFEgHoHTvlq_G3uYFFliw7W1qR_h5-C7ZCZ1j9OKeiHsTSlEjdTloDpfaNuMSGAmrW54vS6pxG2Vv4BDs4G3ighvhcKOQ-056bw1Fv_dJAg00Vy90WTr4NPTHKpLgrkwsldjtCba-BXLOVInesFTTTzFcYLsV240vsDwpf9Lxwr1mZHFIu7Keda50jSWFh1jxMOLSehG14"/>
+</div>
+<!-- Nutrition Card -->
+<div class="group relative bg-surface-container-lowest p-8 rounded-xl overflow-hidden transition-transform hover:-translate-y-2">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-3xl mb-6">ecg_heart</span>
+<h3 class="font-serif text-2xl text-on-surface mb-4">Nutrition</h3>
+<p class="font-body text-on-surface-variant mb-8 leading-relaxed">Fueling the temple. Ayurvedic-inspired meal planning and holistic dietary consultations.</p>
+<ul class="space-y-3 mb-10">
+<li class="flex items-center text-sm font-label uppercase tracking-wider text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container mr-3"></span> Body Analysis
+              </li>
+<li class="flex items-center text-sm font-label uppercase tracking-wider text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container mr-3"></span> Herbal Alchemy
+              </li>
+</ul>
+</div>
+<img alt="Healthy nutrition" class="absolute -bottom-10 -right-10 w-48 h-48 object-cover rounded-full opacity-10 group-hover:scale-110 transition-transform duration-700" data-alt="A beautiful ceramic bowl with green vegetables and herbs on a light stone background, high-end editorial food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBhs3oAJCplUKiSJDNXirZTqppAPssRqjV3mHbcfdgMRNEQ4ZvnFsZStODnloI8Zt1pkEHVkGg5jCKJvEeTja8tgv6g9JVlgNbsB4coKbvB3qKopPudNzdmctFTZTa3jpvTycCGtczv3OT4NKOTu0Hbu1aTwh7d64O57LAAD2wG3p1Ew7SpJcvFP-l3BdJ4QygcgnwBhPwqfOwJA_1bTR5218rzD6KHwqUOGBjcOU2AMgk3ih0muv9UfqIdHNlxd1dUKcoDjsp4Bs"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-4xl mx-auto text-center relative">
+<span class="material-symbols-outlined text-primary-container text-8xl opacity-20 absolute -top-12 -left-12">format_quote</span>
+<div class="relative z-10">
+<p class="font-serif text-3xl md:text-4xl text-on-surface leading-snug mb-12 italic">
+          "Walking into The Breath feels like a sigh of relief for my soul. The instructors don't just teach poses; they teach a way of being that has transformed my life far beyond the mat."
+        </p>
+<div class="flex items-center justify-center space-x-4">
+<img alt="Client portrait" class="w-16 h-16 rounded-full object-cover" data-alt="A close-up portrait of a serene woman with a gentle smile, soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFxvd8HWpbXn1m6xqkOkT1aIxhfnHjqI-LuId9IyX87otiZa5GnkGcL5mgO0CAbVsGAFRzEqSl02Recvb7-UWC9tqQYWjPtsiDLZNtbeObGoAPHdH-WiIUOIZ_T83UONYAyG1vbuzZQ5813OrETTz5nlnGZXE0UBNPak3hPoq6a4N9pc6trBlAmJWtxIlAyPqPRXSuJ0ndJYGtpswW-fpaEpfgvUBlSF0VKVIg-h-oIttIvnI7_IWXoWN1AmUeJamxeGjz6_5zZGc"/>
+<div class="text-left">
+<h4 class="font-label font-bold text-on-surface uppercase tracking-widest text-sm">Elena Rostova</h4>
+<p class="text-tertiary text-xs uppercase tracking-widest">Architect &amp; Studio Member</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="px-8 pb-32">
+<div class="max-w-7xl mx-auto relative rounded-[3rem] overflow-hidden py-24 px-8 md:px-24 bg-primary text-on-primary">
+<div class="absolute inset-0 z-0">
+<img alt="Final CTA background" class="w-full h-full object-cover opacity-20" data-alt="Abstract soft focus of light hitting textured paper, sage and cream tones, ethereal and calm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcDnTMGep4bqj0llarD-xV7_WwCI1R0xtpm_UQzwRxebgq8aL-1oh0O3syooFrVuH0juizXWnJCfyQKSo532jkU5IYY3agGbKcHk51K5bfJsnOVCq8f-oz9I1qgSPta4P6SQen50KSB1YaQcXQQw_LKY1K1Gize9nT8lhRgI8445yS0dkIV9iSarJBuBxm2_FVvJa1nh0AscDvaNMn7XEjYS_n2x1z3hGGRy6HWFQOqLBlRZuvPPkF1O3z8ju7rzxbC682sx3O1JU"/>
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-container opacity-90"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<h2 class="font-serif text-4xl md:text-6xl mb-8">Ready to begin?</h2>
+<p class="font-body text-xl mb-12 max-w-xl opacity-90">Join our community and receive your first foundational class for free. Your journey inward starts with a single breath.</p>
+<div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+<button class="bg-surface text-primary px-12 py-5 rounded-full font-label text-sm uppercase tracking-widest hover:scale-105 transition-all duration-300">Start Your Journey</button>
+<button class="border border-white/40 text-on-primary px-12 py-5 rounded-full font-label text-sm uppercase tracking-widest hover:bg-white/10 transition-all duration-300">View Pricing</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-zinc-950 w-full rounded-t-[3rem]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto">
+<div class="flex flex-col space-y-6">
+<div class="text-xl font-serif text-primary">The Breath</div>
+<p class="font-body text-on-surface-variant max-w-xs text-sm">A dedicated space for conscious living and holistic wellness in the heart of the city.</p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h5 class="font-sans text-sm uppercase tracking-widest text-primary font-bold mb-6">Explore</h5>
+<ul class="space-y-4">
+<li><a class="font-sans text-sm uppercase tracking-widest text-tertiary hover:text-primary transition-colors" href="#">Locations</a></li>
+<li><a class="font-sans text-sm uppercase tracking-widest text-tertiary hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-sans text-sm uppercase tracking-widest text-tertiary hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-sans text-sm uppercase tracking-widest text-primary font-bold mb-6">Social</h5>
+<ul class="space-y-4">
+<li><a class="font-sans text-sm uppercase tracking-widest text-tertiary hover:text-primary transition-colors" href="#">Instagram</a></li>
+<li><a class="font-sans text-sm uppercase tracking-widest text-tertiary hover:text-primary transition-colors" href="#">Pinterest</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col justify-between">
+<div>
+<h5 class="font-sans text-sm uppercase tracking-widest text-primary font-bold mb-6">Newsletter</h5>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline/20 py-3 focus:ring-0 focus:border-primary text-sm tracking-widest outline-none" placeholder="YOUR EMAIL" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary font-bold text-xs uppercase tracking-widest">Join</button>
+</div>
+</div>
+<p class="font-sans text-xs uppercase tracking-widest text-tertiary mt-8">
+          © 2024 The Breath Wellness Studio. All rights reserved.
+        </p>
+</div>
+</div>
+</footer>
+</body></html>
