@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLanguage } from "../../i18n/LanguageContext";
 import Section from "../../components/Section";
 import CTABanner from "../../components/CTABanner";
@@ -6,17 +7,19 @@ import useScrollAnimation from "../../components/useScrollAnimation";
 export default function WorkshopsCourses() {
   const heroRef = useScrollAnimation<HTMLDivElement>();
   const { t } = useLanguage();
+  const [activeFood, setActiveFood] = useState(0);
+  const [activeYoga, setActiveYoga] = useState(0);
 
   const foodCourses = [
-    { name: t.workshopsPage.greenSmoothies, description: t.workshopsPage.greenSmoothiesDesc, icon: "blender" },
-    { name: t.workshopsPage.veganCourse, description: t.workshopsPage.veganCourseDesc, icon: "eco" },
-    { name: t.workshopsPage.alkalineCourse, description: t.workshopsPage.alkalineCourseDesc, icon: "restaurant" },
+    { name: t.workshopsPage.greenSmoothies, intro: t.workshopsPage.greenSmoothiesIntro, bullets: t.workshopsPage.greenSmoothiesBullets, icon: "blender" },
+    { name: t.workshopsPage.veganCourse, intro: t.workshopsPage.veganCourseIntro, bullets: t.workshopsPage.veganCourseBullets, icon: "eco" },
+    { name: t.workshopsPage.alkalineCourse, intro: t.workshopsPage.alkalineCourseIntro, bullets: t.workshopsPage.alkalineCourseBullets, icon: "restaurant" },
   ];
 
   const yogaCourses = [
-    { name: t.workshopsPage.kundaliniWorkshop, description: t.workshopsPage.kundaliniWorkshopDesc, icon: "air" },
-    { name: t.workshopsPage.breathworkMeditation, description: t.workshopsPage.breathworkMeditationDesc, icon: "self_improvement" },
-    { name: t.workshopsPage.ayurvedaCircles, description: t.workshopsPage.ayurvedaCirclesDesc, icon: "menu_book" },
+    { name: t.workshopsPage.kundaliniWorkshop, intro: t.workshopsPage.kundaliniWorkshopIntro, bullets: t.workshopsPage.kundaliniWorkshopBullets, icon: "air" },
+    { name: t.workshopsPage.breathworkMeditation, intro: t.workshopsPage.breathworkMeditationIntro, bullets: t.workshopsPage.breathworkMeditationBullets, icon: "self_improvement" },
+    { name: t.workshopsPage.ayurvedaCircles, intro: t.workshopsPage.ayurvedaCirclesIntro, bullets: t.workshopsPage.ayurvedaCircleBullets, icon: "menu_book" },
   ];
 
   return (
@@ -44,14 +47,43 @@ export default function WorkshopsCourses() {
           <h2 className="font-serif text-4xl md:text-5xl text-on-surface mb-4">{t.workshopsPage.foodTitle}</h2>
           <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">{t.workshopsPage.foodSubtitle}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {foodCourses.map((c) => (
-            <div key={c.name} className="group bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:-translate-y-1">
-              <span className="material-symbols-outlined text-primary text-4xl mb-4">{c.icon}</span>
-              <h3 className="font-serif text-xl text-on-surface mb-3 group-hover:text-primary transition-colors">{c.name}</h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed">{c.description}</p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="lg:col-span-4 bg-surface-container-lowest rounded-2xl p-2 shadow-sm self-start">
+            {foodCourses.map((c, i) => (
+              <button
+                key={c.name}
+                onClick={() => setActiveFood(i)}
+                className={`w-full flex items-center justify-between px-6 py-5 rounded-xl text-left transition-all duration-300 ${
+                  activeFood === i
+                    ? "bg-tertiary/10 text-tertiary"
+                    : "text-on-surface hover:bg-surface-container-low"
+                }`}
+              >
+                <span className={`font-serif text-lg ${activeFood === i ? "font-semibold" : ""}`}>{c.name}</span>
+                {activeFood === i && (
+                  <span className="material-symbols-outlined text-tertiary text-xl shrink-0 ml-2">arrow_forward</span>
+                )}
+              </button>
+            ))}
+          </div>
+          <div className="lg:col-span-8 bg-surface-container-lowest rounded-2xl p-10 md:p-14 shadow-sm relative overflow-hidden">
+            <div className="absolute bottom-6 right-6 opacity-5">
+              <span className="material-symbols-outlined text-tertiary" style={{ fontSize: "8rem" }}>{foodCourses[activeFood].icon}</span>
             </div>
-          ))}
+            <div className="relative z-10">
+              <span className="material-symbols-outlined text-primary text-4xl mb-6 block">{foodCourses[activeFood].icon}</span>
+              <h3 className="font-serif text-3xl md:text-4xl text-tertiary mb-6">{foodCourses[activeFood].name}</h3>
+              <p className="text-on-surface-variant text-lg leading-relaxed mb-6">{foodCourses[activeFood].intro}</p>
+              <ul className="space-y-3">
+                {foodCourses[activeFood].bullets.map((b, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="material-symbols-outlined text-primary mt-0.5 text-xl shrink-0">check_circle</span>
+                    <span className="text-on-surface-variant leading-relaxed">{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -62,14 +94,43 @@ export default function WorkshopsCourses() {
           <h2 className="font-serif text-4xl md:text-5xl text-on-surface mb-4">{t.workshopsPage.yogaTitle}</h2>
           <p className="text-on-surface-variant text-lg max-w-2xl mx-auto">{t.workshopsPage.yogaSubtitle}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {yogaCourses.map((c) => (
-            <div key={c.name} className="group bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:-translate-y-1">
-              <span className="material-symbols-outlined text-primary text-4xl mb-4">{c.icon}</span>
-              <h3 className="font-serif text-xl text-on-surface mb-3 group-hover:text-primary transition-colors">{c.name}</h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed">{c.description}</p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="lg:col-span-4 bg-surface-container-lowest rounded-2xl p-2 shadow-sm self-start">
+            {yogaCourses.map((c, i) => (
+              <button
+                key={c.name}
+                onClick={() => setActiveYoga(i)}
+                className={`w-full flex items-center justify-between px-6 py-5 rounded-xl text-left transition-all duration-300 ${
+                  activeYoga === i
+                    ? "bg-tertiary/10 text-tertiary"
+                    : "text-on-surface hover:bg-surface-container-low"
+                }`}
+              >
+                <span className={`font-serif text-lg ${activeYoga === i ? "font-semibold" : ""}`}>{c.name}</span>
+                {activeYoga === i && (
+                  <span className="material-symbols-outlined text-tertiary text-xl shrink-0 ml-2">arrow_forward</span>
+                )}
+              </button>
+            ))}
+          </div>
+          <div className="lg:col-span-8 bg-surface-container-lowest rounded-2xl p-10 md:p-14 shadow-sm relative overflow-hidden">
+            <div className="absolute bottom-6 right-6 opacity-5">
+              <span className="material-symbols-outlined text-tertiary" style={{ fontSize: "8rem" }}>{yogaCourses[activeYoga].icon}</span>
             </div>
-          ))}
+            <div className="relative z-10">
+              <span className="material-symbols-outlined text-primary text-4xl mb-6 block">{yogaCourses[activeYoga].icon}</span>
+              <h3 className="font-serif text-3xl md:text-4xl text-tertiary mb-6">{yogaCourses[activeYoga].name}</h3>
+              <p className="text-on-surface-variant text-lg leading-relaxed mb-6">{yogaCourses[activeYoga].intro}</p>
+              <ul className="space-y-3">
+                {yogaCourses[activeYoga].bullets.map((b, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="material-symbols-outlined text-primary mt-0.5 text-xl shrink-0">check_circle</span>
+                    <span className="text-on-surface-variant leading-relaxed">{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </Section>
 
